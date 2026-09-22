@@ -1,37 +1,14 @@
 /* ==========================================================
-   LÊ HUY HOÀNG — Portfolio Scripts
+   LE HUY HOANG — Portfolio Scripts | Hardware Workbench Bento
    ========================================================== */
 
-/* ---------- 1. Chuyển đổi ngôn ngữ (Language Toggle) ---------- */
+/* ---------- 1. Mobile Workbench Navigation Toggle ---------- */
 (function () {
-  var html = document.documentElement;
-  var btn = document.getElementById('lang');
-  var saved = 'vi';
-  try {
-    var stored = localStorage.getItem('lhh-lang-v1');
-    if (stored === 'vi' || stored === 'en') saved = stored;
-  } catch (e) {}
-  html.lang = saved;
-  function sync() {
-    if (btn) btn.textContent = html.lang === 'vi' ? 'EN' : 'VI';
-  }
-  sync();
-  if (btn) {
-    btn.addEventListener('click', function () {
-      html.lang = html.lang === 'vi' ? 'en' : 'vi';
-      try { localStorage.setItem('lhh-lang-v1', html.lang); } catch (e) {}
-      sync();
-    });
-  }
-})();
-
-/* ---------- 2. Menu di động (Mobile Burger Menu) ---------- */
-(function () {
-  var b = document.getElementById('burger');
-  var n = document.getElementById('nav');
+  var b = document.getElementById('burger-btn');
+  var n = document.getElementById('bench-nav');
   if (!b || !n) return;
   function close() { n.hidden = true; b.setAttribute('aria-expanded', 'false'); }
-  function apply() { if (window.innerWidth <= 960) close(); else { n.hidden = false; } }
+  function apply() { if (window.innerWidth <= 980) close(); else { n.hidden = false; } }
   apply();
   window.addEventListener('resize', apply);
   b.addEventListener('click', function () {
@@ -40,11 +17,11 @@
     b.setAttribute('aria-expanded', String(open));
   });
   n.addEventListener('click', function (e) {
-    if (e.target.closest('a') && window.innerWidth <= 960) close();
+    if (e.target.closest('a') && window.innerWidth <= 980) close();
   });
 })();
 
-/* ---------- 3. Hiệu ứng hiển thị khi cuộn (Scroll Reveal) ---------- */
+/* ---------- 2. Scroll Reveal Animations ---------- */
 (function () {
   var els = document.querySelectorAll('.rv');
   if (!('IntersectionObserver' in window)) {
@@ -58,22 +35,21 @@
         io.unobserve(en.target);
       }
     });
-  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+  }, { rootMargin: '0px 0px -5% 0px', threshold: 0.05 });
   els.forEach(function (el) { io.observe(el); });
-  // Dự phòng an toàn nếu observer chưa kích hoạt kịp
   window.addEventListener('load', function () {
     setTimeout(function () {
       els.forEach(function (el) {
         var r = el.getBoundingClientRect();
         if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
       });
-    }, 800);
+    }, 600);
   });
 })();
 
-/* ---------- 4. Đánh dấu menu mục đang xem (Active Nav Link) ---------- */
+/* ---------- 3. Active Nav Highlighting ---------- */
 (function () {
-  var links = [].slice.call(document.querySelectorAll('.mainnav a[href^="#"]'));
+  var links = [].slice.call(document.querySelectorAll('.bench-nav a[href^="#"]'));
   if (!links.length || !('IntersectionObserver' in window)) return;
   var map = {};
   links.forEach(function (a) {
@@ -87,17 +63,17 @@
         if (map[en.target.id]) map[en.target.id].classList.add('on');
       }
     });
-  }, { rootMargin: '-40% 0px -55% 0px' });
+  }, { rootMargin: '-35% 0px -60% 0px' });
   Object.keys(map).forEach(function (id) {
     var target = document.getElementById(id);
     if (target) io.observe(target);
   });
   window.addEventListener('scroll', function () {
-    if (window.scrollY < 120) links.forEach(function (a) { a.classList.remove('on'); });
+    if (window.scrollY < 100) links.forEach(function (a) { a.classList.remove('on'); });
   }, { passive: true });
 })();
 
-/* ---------- 5. Thư viện xem ảnh phóng to (Lightbox Modal) ---------- */
+/* ---------- 4. Lightbox Modal ---------- */
 (function () {
   var lb = document.getElementById('lb');
   var img = document.getElementById('lb-img');
@@ -152,4 +128,45 @@
     else if (e.key === 'ArrowLeft') show(currentIndex - 1);
     else if (e.key === 'ArrowRight') show(currentIndex + 1);
   });
+})();
+
+/* ---------- 5. Live Telemetry Realistic Simulator ---------- */
+(function () {
+  var elCO = document.getElementById('val-co');
+  var elSmoke = document.getElementById('val-smoke');
+  var elVOC = document.getElementById('val-voc');
+  var elTemp = document.getElementById('val-temp');
+  var elSync = document.getElementById('val-sync');
+  if (!elCO || !elSmoke) return;
+
+  var baseCO = 18.2;
+  var baseSmoke = 42;
+  var baseVOC = 0.08;
+  var baseTemp = 26.4;
+  var secondsSinceSync = 3;
+
+  setInterval(function () {
+    // Subtle realistic physical fluctuation
+    var jitterCO = (Math.random() * 0.8 - 0.4);
+    var jitterSmoke = Math.round(Math.random() * 2 - 1);
+    var jitterVOC = (Math.random() * 0.02 - 0.01);
+    var jitterTemp = (Math.random() * 0.2 - 0.1);
+
+    elCO.textContent = (baseCO + jitterCO).toFixed(1) + ' ppm';
+    elSmoke.textContent = (baseSmoke + jitterSmoke) + ' ppm';
+    elVOC.textContent = (baseVOC + jitterVOC).toFixed(2) + ' mg/L';
+    elTemp.textContent = (baseTemp + jitterTemp).toFixed(1) + ' °C';
+
+    secondsSinceSync += 3;
+    if (secondsSinceSync >= 15) {
+      secondsSinceSync = 0;
+      if (elSync) {
+        elSync.textContent = 'Uploaded to ThingSpeak just now';
+        elSync.style.color = '#10b981';
+      }
+    } else if (elSync) {
+      elSync.textContent = 'Next ThingSpeak push in ' + (15 - secondsSinceSync) + 's';
+      elSync.style.color = '#64748b';
+    }
+  }, 3000);
 })();

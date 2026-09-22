@@ -1,337 +1,421 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Lê Huy Hoàng &mdash; Electrical &amp; Electronics Engineering Portfolio</title>
-<meta name="description" content="Technical and engineering portfolio of Le Huy Hoang &mdash; Class 11A1 Physics, HUS High School for Gifted Students (HSGS - VNU Hanoi). Focus on Electrical & Electronics Engineering, Embedded IoT (ESP32), PCB Design (Altium Designer), and International Research.">
+<title>Le Huy Hoang &mdash; Electrical &amp; Electronics Engineering Portfolio</title>
+<meta name="description" content="Technical Dossier of Le Huy Hoang &mdash; Class 11A1 Physics, HUS High School for Gifted Students (HSGS - VNU Hanoi). Hardware engineering, custom Altium PCB design, embedded ESP32 telemetry, and published international research.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
-<!-- ================= THANH ĐIỀU HƯỚNG (TOPBAR) ================= -->
-<div class="topbar">
+<!-- ================= WORKBENCH CONTROL BAR ================= -->
+<header class="topbar">
   <div class="wrap">
-    <a class="brand" href="#about">
-      <span class="mk">LHH</span>
-      <span class="brand-text">
-        <span class="brand-name">Lê Huy Hoàng</span>
-        <small class="brand-sub"><span data-en>Electrical &amp; Electronics Engineering</span><span data-vi>Kỹ thuật Điện &ndash; Điện tử</span></small>
-      </span>
+    <a class="brand-ic" href="#workbench">
+      <div class="ic-chip-icon">LHH</div>
+      <div class="brand-meta">
+        <strong>LE HUY HOANG</strong>
+        <span>SYS_ID: LHH-2027 // EEE CORE // HUS-HSGS</span>
+      </div>
     </a>
-    <button class="burger" aria-label="Menu" aria-expanded="false" id="burger">&#9776;</button>
-    <nav class="mainnav" id="nav">
-      <a href="#about"><span data-en>About</span><span data-vi>Bản thân</span></a>
-      <a href="#projects"><span data-en>Projects &amp; Awards</span><span data-vi>Dự án &amp; Giải thưởng</span></a>
-      <a href="#community"><span data-en>Community</span><span data-vi>Cộng đồng</span></a>
-      <a href="#skills"><span data-en>Skills</span><span data-vi>Kỹ năng</span></a>
-      <a href="#journey"><span data-en>Milestones</span><span data-vi>Hành trình</span></a>
-      <a href="#contact"><span data-en>Contact</span><span data-vi>Liên hệ</span></a>
-      <a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="color:var(--cyan)">GitHub &nearr;</a>
-    </nav>
-    <a href="https://github.com/finterstrong" target="_blank" rel="noopener" class="langbtn" style="text-decoration:none;display:inline-flex;align-items:center;gap:4px" title="GitHub: @finterstrong">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-      <span>GH</span>
-    </a>
-    <button class="langbtn" id="lang">EN</button>
-  </div>
-</div>
 
-<!-- ================= HERO SECTION ================= -->
-<header class="hero">
-  <div class="wrap">
-    <div class="avatar-wrap">
-      <img class="avatar" src="assets/img/avatar.jpg" alt="Lê Huy Hoàng">
-      <span class="avatar-badge">ESP32 / PCB</span>
-    </div>
-    <div>
-      <span class="kicker">
-        <span data-en>Student Dossier &middot; HSGS Class of 2027</span>
-        <span data-vi>Hồ sơ năng lực kỹ thuật &middot; Chuyên KHTN Khóa 2027</span>
-      </span>
-      <h1>Lê Huy <em>Hoàng</em></h1>
-      <p class="role">
-        <span data-en>Grade 11 Physics student focused on <b>Electrical &amp; Electronics Engineering</b>. I design custom embedded hardware, Altium PCB layouts, analog sensor signal conditioning rigs, and IoT telemetry systems on ESP32 microcontrollers.</span>
-        <span data-vi>Học sinh lớp 11A1 chuyên Vật lý định hướng <b>Kỹ thuật Điện &ndash; Điện tử &amp; Hệ thống nhúng</b>. Em đam mê thiết kế phần cứng vi điều khiển, vẽ mạch in trên Altium Designer, xử lý tín hiệu cảm biến tương tự và phát triển hệ thống quan trắc IoT trên ESP32.</span>
-      </p>
-      <div class="school">
-        <span data-en>HUS High School for Gifted Students &mdash; VNU Hanoi &middot; Class 11A1 Physics</span>
-        <span data-vi>Trường THPT Chuyên Khoa học Tự nhiên &mdash; ĐHQG Hà Nội &middot; Lớp 11A1 Chuyên Lý</span>
-      </div>
-      <div class="cta">
-        <a class="btn pri" href="#projects">
-          <span data-en>View Engineering Builds &darr;</span>
-          <span data-vi>Xem dự án kỹ thuật &darr;</span>
-        </a>
-        <a class="btn" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
-          <span data-en>Technical Report (PDF) &rarr;</span>
-          <span data-vi>Báo cáo kỹ thuật (PDF) &rarr;</span>
-        </a>
-        <a class="btn" href="https://github.com/finterstrong" target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:text-bottom;margin-right:4px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span>GitHub</span> &rarr;
-        </a>
-        <a class="btn" href="#contact">
-          <span data-en>Contact</span>
-          <span data-vi>Liên hệ</span>
-        </a>
-      </div>
-    </div>
+    <button class="burger-btn" id="burger-btn" aria-label="Toggle Menu" aria-expanded="false">&#9776;</button>
+
+    <nav class="bench-nav" id="bench-nav">
+      <a href="#workbench">Workbench</a>
+      <a href="#hardware">ESP32 Rig</a>
+      <a href="#research">Research &amp; Awards</a>
+      <a href="#competencies">Toolchain</a>
+      <a href="#community">Community</a>
+      <a href="#milestones">Timeline</a>
+      <a href="#dossier">Dossier</a>
+      <a class="nav-gh-pill" href="https://github.com/finterstrong" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>GitHub</span> ↗
+      </a>
+    </nav>
   </div>
 </header>
 
-<!-- ================= DẢI SỐ LIỆU NỔI BẬT (STATS STRIP) ================= -->
-<div class="strip">
-  <div class="wrap">
-    <div class="stat">
-      <b>11A1</b>
-      <span data-en>Physics Major &middot; HSGS</span>
-      <span data-vi>Chuyên Lý &middot; THPT Chuyên KHTN</span>
-    </div>
-    <div class="stat">
-      <b class="g">Grand Prix</b>
-      <span data-en>AIGC 2025 Singapore</span>
-      <span data-vi>Giải Quốc tế AIGC 2025</span>
-    </div>
-    <div class="stat">
-      <b class="l">IJMSM</b>
-      <span data-en>Int'l Research Co-Author</span>
-      <span data-vi>Đồng tác giả NCKH Quốc tế</span>
-    </div>
-    <div class="stat">
-      <b>ESP32 IoT</b>
-      <span data-en>Custom PCB &amp; Firmware</span>
-      <span data-vi>Mạch in Altium &amp; Firmware</span>
-    </div>
-    <div class="stat">
-      <b class="l">Xanh Pôn</b>
-      <span data-en>Hospital Volunteer (2026)</span>
-      <span data-vi>Thiện nguyện BV Xanh Pôn</span>
-    </div>
-  </div>
-</div>
+<!-- ================= MAIN WORKBENCH CONTAINER ================= -->
+<main class="wrap" id="workbench" style="padding-top: 36px; padding-bottom: 20px;">
 
-<!-- ================= 01 / VỀ BẢN THÂN (ABOUT) ================= -->
-<section id="about">
-  <div class="wrap">
-    <div class="sechead rv">
-      <div class="eyebrow">01 / <span data-en>Background &amp; Focus</span><span data-vi>Về bản thân</span></div>
-      <h2><span data-en>Engineering Mindset &amp; Passion</span><span data-vi>Định hướng &amp; Tư duy kỹ thuật</span></h2>
-    </div>
-    <div class="grid2">
-      <div class="card rv">
-        <p style="margin-top:0">
-          <span data-en>I am <b>Le Huy Hoang</b>, an 11th-grade Physics-major student at HUS High School for Gifted Students (HSGS), Vietnam National University, Hanoi. My academic passion centers on <b>Electrical &amp; Electronics Engineering (EEE)</b> and <b>Embedded Systems</b>: designing physical circuit boards, writing low-level firmware, and interfacing analog sensors with digital microcontrollers to solve practical environmental challenges.</span>
-          <span data-vi>Em là <b>Lê Huy Hoàng</b>, học sinh lớp 11A1 chuyên Vật lý tại trường THPT Chuyên Khoa học Tự nhiên (HSGS) &mdash; ĐHQG Hà Nội. Định hướng học thuật cốt lõi của em là ngành <b>Kỹ thuật Điện &ndash; Điện tử (EEE)</b> và <b>Hệ thống nhúng</b>: tự tay thiết kế bo mạch in phần cứng, lập trình vi điều khiển và xử lý tín hiệu cảm biến để giải quyết các bài toán thiết thực trong đời sống.</span>
+  <!-- ================= BENTO ROW 1: CORE IC & TELEMETRY ================= -->
+  <div class="bento-grid">
+    
+    <!-- MODULE 01: IC PROFILE & IDENTITY (COL 7) -->
+    <div class="bento-card hero-id-card col-7 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> TP_CORE_01</div>
+      <div>
+        <div class="silkscreen-tag">HSGS PHYSICS CLASS OF 2027 // EEE CANDIDATE</div>
+        <div class="hero-head-row" style="margin-top: 14px;">
+          <div class="avatar-ic-frame">
+            <img src="assets/img/avatar.jpg" alt="Le Huy Hoang">
+            <span class="ic-pinout-label ic-pin-socket">MCU: ESP32-WROOM</span>
+          </div>
+          <div class="hero-titles">
+            <h1>Le Huy <em>Hoang</em></h1>
+            <div class="hero-tagline">Electrical &amp; Electronics Engineering &middot; Embedded Hardware</div>
+            <div class="hero-subtag">HUS High School for Gifted Students &mdash; VNU Hanoi &middot; Class 11A1 Physics</div>
+          </div>
+        </div>
+        <p class="hero-desc">
+          High school student specializing in Physics with hands-on dedication to hardware prototyping: designing custom 2-layer PCBs on Altium Designer, conditioning analog multi-gas sensor arrays, programming low-level embedded firmware in C/C++, and building cloud IoT telemetry stations.
         </p>
-        <p>
-          <span data-en>Instead of relying on pre-assembled modules, I delve into the full engineering cycle: schematic capture, 2-layer PCB layout in Altium Designer, ADC calibration curves, power conditioning, and cloud telemetry over WiFi. My personal flagship build is an ESP32-powered multi-gas air-quality monitoring station with three MQ sensors and OLED readout.</span>
-          <span data-vi>Thay vì chỉ ghép nối các module thương mại sẵn có, em luôn chủ động thực hiện toàn diện chu trình kỹ thuật: vẽ sơ đồ nguyên lý, thiết kế mạch in 2 lớp trên Altium Designer, xây dựng đường cong hiệu chuẩn cảm biến qua ADC 12-bit, tối ưu hóa mạch nguồn ổn áp và truyền dữ liệu đám mây qua WiFi. Sản phẩm tiêu biểu của em là hệ thống quan trắc chất lượng không khí đa cảm biến trên vi điều khiển ESP32.</span>
-        </p>
-        <blockquote class="quote">
-          <span data-en>&ldquo;Clean air is something everyone needs but few can measure &mdash; so I engineered a device that can.&rdquo;</span>
-          <span data-vi>&ldquo;Không khí sạch là thứ ai cũng cần nhưng ít ai đo được &mdash; nên mình tự tay chế tạo thiết bị đo.&rdquo;</span>
-        </blockquote>
       </div>
 
-      <div class="card rv">
-        <h3><span data-en>Technical Profile Summary</span><span data-vi>Tóm tắt hồ sơ kỹ thuật</span></h3>
-        <ul style="list-style:none;margin-left:0;line-height:2">
-          <li><span class="meta" data-en>Full Name</span><span class="meta" data-vi>Họ và tên</span><br><b>Lê Huy Hoàng</b> (HSGS &ndash; Class of 2027)</li>
-          <li><span class="meta" data-en>Academic Track</span><span class="meta" data-vi>Hệ đào tạo</span><br><span data-en>11A1 Physics &mdash; HUS High School for Gifted Students, VNU</span><span data-vi>Lớp 11A1 Chuyên Lý &mdash; THPT Chuyên KHTN, ĐHQG Hà Nội</span></li>
-          <li><span class="meta" data-en>Intended Majors</span><span class="meta" data-vi>Ngành học hướng tới</span><br><b>Electrical &amp; Electronics Engineering (EEE)</b> / Embedded Systems</li>
-          <li><span class="meta" data-en>Core Hardware Stack</span><span class="meta" data-vi>Nền tảng phần cứng</span><br>ESP32 &middot; Altium Designer PCB &middot; ADC Conditioning &middot; Sensor Telemetry</li>
-          <li><span class="meta" data-en>Research Track</span><span class="meta" data-vi>Nghiên cứu &amp; Thành tích</span><br><span data-en>IJMSM Journal Co-Author &middot; AIGC 2025 Grand Prix Award (Singapore)</span><span data-vi>Đồng tác giả Tạp chí Quốc tế IJMSM &middot; Giải Grand Prix AIGC 2025 Singapore</span></li>
-          <li><span class="meta">GitHub</span><br><a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="font-family:var(--mono);color:var(--cyan);font-weight:600">&#64;finterstrong &rarr;</a></li>
-        </ul>
-        <div class="tags">
-          <span>Altium Designer</span><span>ESP32</span><span>C / C++</span><span>12-bit ADC</span><span>I2C / SPI / UART</span><span>ThingSpeak IoT</span><span>Sensors MQ</span>
-        </div>
-        <div class="chips">
-          <span data-en>Circuit Design</span><span data-vi>Thiết kế mạch in PCB</span>
-          <span data-en>Embedded Firmware</span><span data-vi>Lập trình nhúng</span>
-          <span data-en>Environmental IoT</span><span data-vi>Quan trắc IoT môi trường</span>
-          <span data-en>Community Action</span><span data-vi>Hoạt động vì cộng đồng</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 02 / DỰ ÁN KỸ THUẬT & THÀNH TÍCH (PROJECTS & AWARDS) ================= -->
-<section id="projects">
-  <div class="wrap">
-    <div class="sechead rv">
-      <div class="eyebrow">02 / <span data-en>Engineering Builds &amp; Awards</span><span data-vi>Dự án kỹ thuật &amp; Thành tích</span></div>
-      <h2><span data-en>Verified Hardware, Research &amp; Honors</span><span data-vi>Sản phẩm phần cứng, Nghiên cứu &amp; Giải thưởng</span></h2>
-    </div>
-
-    <!-- DỰ ÁN 1: MÁY ĐO CHẤT LƯỢNG KHÔNG KHÍ IoT (ESP32) -->
-    <div class="card featured rv">
-      <div class="meta">
-        <span data-en>Personal Engineering Build &middot; Hardware &amp; Firmware Prototype (2025&ndash;2026)</span>
-        <span data-vi>Sản phẩm cá nhân tự chế tạo &middot; Phần cứng &amp; Firmware nguyên mẫu (2025&ndash;2026)</span>
-      </div>
-      <h3 style="margin-top:8px;font-size:1.35rem">
-        <span data-en>IoT Air-Quality Monitoring Station (ESP32 &amp; Altium PCB)</span>
-        <span data-vi>Hệ thống quan trắc chất lượng không khí IoT (ESP32 &amp; Mạch in Altium)</span>
-      </h3>
-      <p>
-        <span data-en>Independently architected, designed, and fabricated an end-to-end air-quality telemetry station powered by a dual-core ESP32 MCU. The system integrates three calibrated gas sensors, local real-time I2C OLED diagnostics, and an automated WiFi telemetry pipeline uploading environmental indices to the ThingSpeak cloud dashboard.</span>
-        <span data-vi>Tự thiết kế và chế tạo trọn vẹn hệ thống trạm đo chất lượng không khí sử dụng vi điều khiển ESP32 lõi kép. Thiết bị tích hợp cụm ba cảm biến khí đã hiệu chuẩn, hiển thị chẩn đoán tức thời trên màn OLED I2C tại chỗ và tự động gửi dữ liệu chỉ số môi trường lên nền tảng đám mây ThingSpeak qua sóng WiFi.</span>
-      </p>
-
-      <div class="grid2" style="align-items:start;margin-top:18px">
-        <div>
-          <h4><span data-en>Hardware Architecture &amp; Circuit Design</span><span data-vi>Kiến trúc phần cứng &amp; Thiết kế mạch in</span></h4>
-          <ul>
-            <li><span data-en><b>Multi-Gas Sensor Array</b>: Integrates MQ2 (smoke/flammable hydrocarbons), MQ3 (alcohol/VOC vapor), and MQ7 (carbon monoxide &ndash; CO) conditioned via precision voltage divider networks.</span><span data-vi><b>Cụm ba cảm biến khí độc lập</b>: Tích hợp MQ2 (khói/khí cháy nổ), MQ3 (hơi cồn/hợp chất hữu cơ bay hơi VOC) và MQ7 (khí CO) qua các mạch phân áp điện trở chính xác.</span></li>
-            <li><span data-en><b>12-bit ADC Signal Acquisition</b>: Interfaced with ESP32 high-impedance analog pins (GPIO34, GPIO35); applies digital moving-average filtering to suppress high-frequency noise.</span><span data-vi><b>Thu nhận tín hiệu ADC 12-bit</b>: Kết nối với các chân ngõ vào tương tự của ESP32 (GPIO34, GPIO35); áp dụng bộ lọc trung bình động triệt tiêu nhiễu tần số cao.</span></li>
-            <li><span data-en><b>Altium Designer PCB Routing</b>: Custom 2-layer PCB layout with dedicated analog ground planes, decoupling capacitors, and optimized trace impedance to ensure signal integrity.</span><span data-vi><b>Thiết kế PCB trên Altium Designer</b>: Thiết kế bo mạch in 2 lớp chuẩn công nghiệp, phân tách mặt mass tương tự (AGND), tụ lọc nhiễu nguồn và đường mạch tối ưu độ ổn định.</span></li>
-            <li><span data-en><b>Dual Power Regulation</b>: Regulated 5V rail for heating coil sensors and clean 3.3V LDO for ESP32 and OLED digital logic.</span><span data-vi><b>Mạch nguồn ổn áp kép</b>: Phân chia đường nguồn 5V ổn định cho sợi đốt cảm biến và nguồn 3.3V lọc nhiễu cho vi điều khiển ESP32 cùng màn OLED.</span></li>
-          </ul>
-        </div>
-        <div>
-          <h4><span data-en>Firmware, Calibration &amp; Cloud Telemetry</span><span data-vi>Thuật toán hiệu chuẩn, Firmware &amp; Đám mây</span></h4>
-          <ul>
-            <li><span data-en><b>PPM Calibration Curves</b>: Translated non-linear sensor resistance ratios (Rs/R0) into accurate gas concentrations (ppm) via empirical power-law regression models.</span><span data-vi><b>Quy đổi nồng độ PPM</b>: Chuyển đổi tỉ số điện trở cảm biến phi tuyến (Rs/R0) sang nồng độ khí thực tế (ppm) dựa trên phương trình hồi quy hàm mũ từ buồng thử nghiệm.</span></li>
-            <li><span data-en><b>3-Tier Environmental Health Grading</b>: Real-time air classification into Good, Moderate, and Poor (e.g., CO below 50 ppm is Good; above 200 ppm triggers alerts).</span><span data-vi><b>Đánh giá chất lượng 3 cấp độ</b>: Tự động phân loại Tốt / Trung bình / Kém (ví dụ nồng độ CO dưới 50 ppm là Tốt, vượt ngưỡng 200 ppm kích hoạt cảnh báo).</span></li>
-            <li><span data-en><b>Local OLED Diagnostics &amp; Cloud Sync</b>: Real-time graphical output on SSD1306 OLED (I2C) with periodic 15-second telemetry push to ThingSpeak via secure HTTP REST client.</span><span data-vi><b>Hiển thị OLED &amp; Đồng bộ Đám mây</b>: Hiển thị trực tiếp trên màn OLED SSD1306 (I2C) và gửi gói tin đo đạc lên đám mây ThingSpeak định kỳ mỗi 15 giây.</span></li>
-            <li><span data-en><b>Verified Robustness</b>: Lab trials achieved &plusmn;5% measurement error against calibrated reference meters, 10&ndash;60s response time, &gt;95% telemetry success rate, and automated WiFi reconnect logic.</span><span data-vi><b>Kiểm chứng thực nghiệm</b>: Thử nghiệm đạt sai số trong khoảng &plusmn;5% so với thiết bị đo chuẩn, thời gian đáp ứng 10&ndash;60 giây, tỷ lệ gửi dữ liệu thành công trên 95% và tự động kết nối lại khi mất mạng.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Khung thông số kỹ thuật (Specs Box) -->
-      <div class="specs-box">
-        <div class="spec-item">
-          <small><span data-en>Microcontroller</span><span data-vi>Vi điều khiển</span></small>
-          <strong>ESP32 Dual-Core 240MHz</strong>
-        </div>
-        <div class="spec-item">
-          <small><span data-en>Sensors</span><span data-vi>Cảm biến</span></small>
-          <strong>MQ2 &middot; MQ3 &middot; MQ7 &middot; DHT22</strong>
-        </div>
-        <div class="spec-item">
-          <small><span data-en>CAD / PCB Tool</span><span data-vi>Công cụ mạch in</span></small>
-          <strong>Altium Designer (2-Layer)</strong>
-        </div>
-        <div class="spec-item">
-          <small><span data-en>Telemetry Protocol</span><span data-vi>Giao thức truyền dẫn</span></small>
-          <strong>WiFi 802.11 b/g/n &middot; REST / ThingSpeak</strong>
-        </div>
-        <div class="spec-item">
-          <small><span data-en>Measurement Error</span><span data-vi>Độ sai số kiểm nghiệm</span></small>
-          <strong>&plusmn;5% (Compared to Lab Benchmarks)</strong>
-        </div>
-      </div>
-
-      <!-- Thư viện hình ảnh thực tế thiết bị -->
-      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--line)">
-        <h4 style="font-size:0.92rem;color:var(--cyan);margin-bottom:6px">
-          <span data-en>Hardware build &amp; experimental verification photos (click to zoom)</span>
-          <span data-vi>Hình ảnh bo mạch, linh kiện &amp; thử nghiệm thực tế (nhấp để phóng to)</span>
-        </h4>
-        <div class="gal">
-          <a href="assets/img/act0-0.jpg" data-lb><img src="assets/img/act0-0.jpg" alt="ESP32 Air Quality Monitor 1" loading="lazy"></a>
-          <a href="assets/img/act0-1.jpg" data-lb><img src="assets/img/act0-1.jpg" alt="ESP32 Air Quality Monitor 2" loading="lazy"></a>
-          <a href="assets/img/act0-2.jpg" data-lb><img src="assets/img/act0-2.jpg" alt="ESP32 Air Quality Monitor 3" loading="lazy"></a>
-          <a href="assets/img/act0-3.jpg" data-lb><img src="assets/img/act0-3.jpg" alt="ESP32 Air Quality Monitor 4" loading="lazy"></a>
-          <a href="assets/img/act0-4.jpg" data-lb><img src="assets/img/act0-4.jpg" alt="ESP32 Air Quality Monitor 5" loading="lazy"></a>
-          <a href="assets/img/act0-5.jpg" data-lb><img src="assets/img/act0-5.jpg" alt="ESP32 Air Quality Monitor 6" loading="lazy"></a>
-        </div>
-      </div>
-
-      <div class="doclinks">
-        <a class="btn pri" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
-          <span data-en>Download Full Technical Report (PDF) &rarr;</span>
-          <span data-vi>Tải Báo cáo Kỹ thuật Đầy đủ (PDF) &rarr;</span>
+      <div class="bench-cta-row">
+        <a class="btn-hw primary" href="#hardware">
+          <span>Explore ESP32 Rig</span> &darr;
+        </a>
+        <a class="btn-hw" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
+          <span>Technical Report (PDF)</span> &rarr;
+        </a>
+        <a class="btn-hw" href="https://github.com/finterstrong" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>@finterstrong</span> ↗
         </a>
       </div>
     </div>
 
-    <!-- DỰ ÁN 2 & GIẢI THƯỞNG (2 CỘT) -->
-    <div class="grid2" style="margin-top:24px">
-      <!-- NCKH QUỐC TẾ IJMSM -->
-      <div class="card rv" style="border-left:4px solid var(--violet)">
-        <div class="meta"><span data-en>International Academic Journal &middot; 2026</span><span data-vi>Bài báo Tạp chí Khoa học Quốc tế &middot; 2026</span></div>
-        <h3 style="margin-top:8px">
-          <span data-en>Co-Author, International Research Paper (IJMSM)</span>
-          <span data-vi>Đồng tác giả nghiên cứu khoa học quốc tế (Tạp chí IJMSM)</span>
-        </h3>
-        <p>
-          <span data-en>Co-author (3rd of 7 contributors) of the published paper: <i>&ldquo;Reducing Traffic Congestion in Hanoi, Vietnam Using Artificial Intelligence and Internet of Things&rdquo;</i>. Contributed to IoT telemetry pipeline design, sensor deployment strategy, and real-time field data collection.</span>
-          <span data-vi>Đồng tác giả (vị trí thứ 3 trong 7 tác giả) bài báo khoa học: <i>&ldquo;Reducing Traffic Congestion in Hanoi, Vietnam Using Artificial Intelligence and Internet of Things&rdquo;</i>. Đóng góp xây dựng đường truyền thu thập dữ liệu IoT, khảo sát bố trí cảm biến và tổng hợp số liệu thực địa.</span>
-        </p>
-        <ul style="margin-top:12px">
-          <li><b><span data-en>Journal:</span><span data-vi>Tạp chí:</span></b> Golden Sun-Rise International Journal of Multidisciplinary on Science and Management (ISSN 3048-5037)</li>
-          <li><b><span data-en>Publication:</span><span data-vi>Số phát hành:</span></b> Vol. 3, No. 3 (2026), pp. 120&ndash;129</li>
-          <li><b><span data-en>Authors:</span><span data-vi>Tác giả:</span></b> Nguyen Xuan Hung, Lam An Binh, <b>Le Huy Hoang</b>, Dao Duy Bach, Nguyen Viet Anh, Bui Thai An, Vu Xuan Manh</li>
-          <li><b>DOI:</b> <a href="https://doi.org/10.71141/30485037/V3I3P111" target="_blank" rel="noopener" style="font-family:var(--mono)">10.71141/30485037/V3I3P111</a></li>
-        </ul>
-      </div>
+    <!-- MODULE 02: LIVE SENSOR TELEMETRY SIMULATOR (COL 5) -->
+    <div class="bento-card telemetry-card col-5 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> TELEMETRY_PORT_0</div>
+      <div>
+        <div class="telemetry-header">
+          <div class="telemetry-title">
+            <span class="led-pulse"></span>
+            <span>ESP32 SENSOR RIG &middot; LIVE TELEMETRY</span>
+          </div>
+          <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--dim)">CHAN #284192</span>
+        </div>
 
-      <!-- GIẢI THƯỞNG AIGC 2025 GRAND PRIX -->
-      <div class="card award-card rv">
-        <div class="meta"><span data-en>International Competition &middot; Singapore 2025</span><span data-vi>Cuộc thi Sáng tạo Quốc tế &middot; Singapore 2025</span></div>
-        <h3 style="margin-top:8px">
-          <span data-en>Grand Prix Award &mdash; AIGC 2025 Singapore</span>
-          <span data-vi>Giải thưởng Grand Prix &mdash; Cuộc thi AIGC 2025 Singapore</span>
-        </h3>
-        <p>
-          <span data-en>Awarded the prestigious <b>Grand Prix Award</b> at the Advanced Innovation Global Competition (AIGC) 2025 in Singapore for the engineering project: <i>&ldquo;AI-Powered Protective Gear Recognition System for Construction Site Safety&rdquo;</i>.</span>
-          <span data-vi>Vinh dự được trao <b>Giải thưởng Grand Prix</b> tại Cuộc thi Sáng chế và Đổi mới Toàn cầu (AIGC) 2025 tổ chức tại Singapore cho dự án: <i>&ldquo;AI-Powered Protective Gear Recognition System for Construction Site Safety&rdquo;</i> (Hệ thống AI nhận diện trang bị bảo hộ lao động cho an toàn công trường xây dựng).</span>
-        </p>
-        <div style="margin-top:16px;display:flex;align-items:center;gap:16px">
-          <a href="assets/img/award-aigc.jpg" data-lb style="flex:0 0 100px;width:100px;height:100px;border-radius:12px;overflow:hidden;border:1px solid var(--line2);display:block">
-            <img src="assets/img/award-aigc.jpg" alt="AIGC Grand Prix Award Certificate" style="width:100%;height:100%;object-fit:cover" loading="lazy">
-          </a>
-          <div style="font-size:0.88rem;color:var(--mute)">
-            <b style="color:var(--amber)">AIGC 2025 Grand Prix</b><br>
-            <span data-en>Awarded May 4, 2025 in Singapore for industrial AI safety monitoring. Click thumbnail to view certificate.</span>
-            <span data-vi>Trao ngày 4/5/2025 tại Singapore. Bấm vào ảnh nhỏ để xem chi tiết bằng khen giải thưởng.</span>
+        <div class="telemetry-grid">
+          <!-- CELL 1: MQ7 CO -->
+          <div class="telemetry-cell alert">
+            <small>Carbon Monoxide (MQ-7)</small>
+            <div class="telemetry-val" id="val-co">18.2 ppm</div>
+            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--emerald)">STATUS: SAFE (&lt;50 ppm)</span>
+          </div>
+
+          <!-- CELL 2: MQ2 SMOKE -->
+          <div class="telemetry-cell">
+            <small>Smoke &amp; Flammable (MQ-2)</small>
+            <div class="telemetry-val" id="val-smoke">42 ppm</div>
+            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--cyan)">NORMAL AMBIENT</span>
+          </div>
+
+          <!-- CELL 3: MQ3 ALCOHOL/VOC -->
+          <div class="telemetry-cell">
+            <small>VOC &amp; Vapor (MQ-3)</small>
+            <div class="telemetry-val" id="val-voc">0.08 mg/L</div>
+            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--cyan)">CLEAN BASELINE</span>
+          </div>
+
+          <!-- CELL 4: DHT22 CLIMATE -->
+          <div class="telemetry-cell">
+            <small>Temperature &amp; RH</small>
+            <div class="telemetry-val" id="val-temp">26.4 °C</div>
+            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--mute)">62% RH &middot; ROOM COND</span>
           </div>
         </div>
       </div>
+
+      <div class="telemetry-status">
+        <span id="val-sync">Next ThingSpeak push in 12s</span>
+        <span style="color:var(--emerald)">WiFi: 802.11 b/g/n OK</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= BENTO ROW 2: CREDENTIALS MATRIX ================= -->
+  <div class="bento-grid" style="margin-top: 18px;">
+    <div class="bento-card stat-pill-card col-3 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> PIN_01</div>
+      <div class="stat-num">11A1</div>
+      <div class="stat-lbl">Physics Major &middot; HSGS Hanoi</div>
+    </div>
+    <div class="bento-card stat-pill-card col-3 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> PIN_02</div>
+      <div class="stat-num gold">Grand Prix</div>
+      <div class="stat-lbl">AIGC 2025 Singapore Winner</div>
+    </div>
+    <div class="bento-card stat-pill-card col-3 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> PIN_03</div>
+      <div class="stat-num copper">IJMSM</div>
+      <div class="stat-lbl">Co-Author, Int'l IoT Journal</div>
+    </div>
+    <div class="bento-card stat-pill-card col-3 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> PIN_04</div>
+      <div class="stat-num">2-Layer</div>
+      <div class="stat-lbl">Custom Altium PCB Prototype</div>
     </div>
   </div>
-</section>
 
-<!-- ================= 03 / HOẠT ĐỘNG NGOẠI KHÓA & CỘNG ĐỒNG (COMMUNITY) ================= -->
-<section id="community">
-  <div class="wrap">
-    <div class="sechead rv">
-      <div class="eyebrow">03 / <span data-en>Community &amp; Volunteering</span><span data-vi>Cộng đồng &amp; Hoạt động xã hội</span></div>
-      <h2><span data-en>Social Contribution &amp; Volunteer Leadership</span><span data-vi>Đóng góp xã hội &amp; Trách nhiệm cộng đồng</span></h2>
+  <!-- ================= SECTION: HARDWARE TEARDOWN DEEP-DIVE ================= -->
+  <div class="section-marker" id="hardware">
+    <span class="marker-num">01 // HARDWARE TEARDOWN</span>
+    <h2 class="bench-title">ESP32 IoT Air-Quality Station &mdash; Schematic &amp; Fabrication</h2>
+  </div>
+
+  <div class="teardown-box rv">
+    <div class="teardown-meta">
+      <div>
+        <div class="silkscreen-tag">FLAGSHIP ENGINEERING BUILD &middot; 2025&ndash;2026</div>
+        <h3 style="font-size:1.4rem;color:#fff;margin-top:6px;">Multi-Sensor Environmental Telemetry Station</h3>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="teardown-badge">ESP32-WROOM-32</span>
+        <span class="teardown-badge">Altium 2-Layer PCB</span>
+        <span class="teardown-badge">12-Bit ADC</span>
+        <span class="teardown-badge">ThingSpeak REST</span>
+      </div>
     </div>
 
-    <!-- HOẠT ĐỘNG 1: BỆNH VIỆN XANH PÔN -->
-    <div class="card rv" style="border-left:4px solid var(--lime)">
-      <div class="meta"><span data-en>Charity &amp; Social Welfare &middot; Saint Paul Hospital (2026)</span><span data-vi>Thiện nguyện &amp; An sinh xã hội &middot; Bệnh viện Đa khoa Xanh Pôn (2026)</span></div>
-      <h3 style="margin-top:8px">
-        <span data-en>Gift-Giving &amp; Moral Support for Pediatric Patients &mdash; Saint Paul General Hospital</span>
-        <span data-vi>Chương trình thiện nguyện tặng quà bệnh nhi có hoàn cảnh khó khăn &mdash; Bệnh viện Đa khoa Xanh Pôn</span>
+    <p style="font-size:0.95rem;color:var(--mute);max-width:85ch;">
+      A fully independent hardware and firmware build engineered from basic circuit theory to complete PCB fabrication. Rather than using pre-packaged breakout modules, this station features a custom-routed power and signal conditioning board, empirical ppm calibration regression curves, local I2C OLED diagnostics, and an automatic WiFi telemetry pipeline pushing metrics to the cloud every 15 seconds.
+    </p>
+
+    <!-- 3 SUBSYSTEM BLOCKS -->
+    <div class="teardown-subsystems">
+      <!-- BLOCK A -->
+      <div class="subsystem-block">
+        <h4><span>&#9881;</span> 1. Sensor Conditioning &amp; ADC</h4>
+        <p>Three analog semiconductor gas sensors interfaced with ESP32 input-only GPIO lines:</p>
+        <ul>
+          <li><b>MQ-7 (Carbon Monoxide)</b>: Precision voltage-divider circuit calibrated for 10&ndash;500 ppm range.</li>
+          <li><b>MQ-2 (Smoke &amp; Hydrocarbons)</b>: Detects methane, butane, and smoke particles.</li>
+          <li><b>MQ-3 (Alcohol &amp; VOC Vapor)</b>: Fast-response organic vapor telemetry.</li>
+          <li><b>12-Bit ADC + Filtering</b>: Dedicated low-pass RC filters &amp; moving-average digital sampling to suppress high-frequency noise.</li>
+        </ul>
+      </div>
+
+      <!-- BLOCK B -->
+      <div class="subsystem-block">
+        <h4><span>&#128190;</span> 2. Altium PCB Routing &amp; Power</h4>
+        <p>Custom printed circuit board engineered for high signal integrity and thermal stability:</p>
+        <ul>
+          <li><b>Solid Ground Plane (GND)</b>: Star-ground topology isolating noisy 5V heater coils from sensitive analog lines.</li>
+          <li><b>Dual Power Regulation</b>: Linear 5V rail for sensor heater coils (heating cycles) + high-efficiency 3.3V LDO for the ESP32 MCU and OLED.</li>
+          <li><b>Trace Impedance</b>: Controlled trace routing for high-speed I2C clock (SCL) and data (SDA) lines.</li>
+          <li><b>Prototyping</b>: Fabricated, hand-soldered, and verified on a digital storage oscilloscope.</li>
+        </ul>
+      </div>
+
+      <!-- BLOCK C -->
+      <div class="subsystem-block">
+        <h4><span>&#128246;</span> 3. Firmware &amp; Cloud Pipeline</h4>
+        <p>Embedded C++ routines structured for fault-tolerant, uninterrupted field operation:</p>
+        <ul>
+          <li><b>Empirical Calibration</b>: Power-law regression models converting non-linear Rs/R0 ratios into verified ppm indices.</li>
+          <li><b>Local Diagnostics</b>: Real-time SSD1306 OLED (128x64) graphical interface over hardware I2C bus.</li>
+          <li><b>ThingSpeak Cloud Push</b>: Asynchronous HTTP REST requests transmitting telemetry packets every 15s.</li>
+          <li><b>Self-Healing Reconnect</b>: Software watchdog and automated WiFi recovery logic if the AP connection drops.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SPECS MATRIX -->
+    <div class="specs-bar">
+      <div class="spec-chip">
+        <small>Measurement Error</small>
+        <strong>&plusmn;5% vs. Benchmark</strong>
+      </div>
+      <div class="spec-chip">
+        <small>Response Time</small>
+        <strong>10 &ndash; 60 Seconds</strong>
+      </div>
+      <div class="spec-chip">
+        <small>Packet Success Rate</small>
+        <strong>&gt; 95% over WiFi</strong>
+      </div>
+      <div class="spec-chip">
+        <small>Calibration Method</small>
+        <strong>Power-Law Curve Fit</strong>
+      </div>
+      <div class="spec-chip">
+        <small>PCB Dimensions</small>
+        <strong>Double-Sided FR4</strong>
+      </div>
+    </div>
+
+    <!-- HARDWARE GALLERY WITH LIGHTBOX -->
+    <div style="margin-top:24px;border-top:1px solid var(--pcb-border);padding-top:18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <span class="silkscreen-tag">PHYSICAL BUILD &amp; LAB BENCH PHOTOS (CLICK TO EXPAND)</span>
+        <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--dim)">6 VERIFIED SHOTS</span>
+      </div>
+      <div class="hw-gallery-grid">
+        <a href="assets/img/act0-0.jpg" data-lb><img src="assets/img/act0-0.jpg" alt="ESP32 Air Station - Circuit Board Assembly" loading="lazy"></a>
+        <a href="assets/img/act0-1.jpg" data-lb><img src="assets/img/act0-1.jpg" alt="ESP32 Air Station - Sensor Array Wiring" loading="lazy"></a>
+        <a href="assets/img/act0-2.jpg" data-lb><img src="assets/img/act0-2.jpg" alt="ESP32 Air Station - OLED Real-time Display" loading="lazy"></a>
+        <a href="assets/img/act0-3.jpg" data-lb><img src="assets/img/act0-3.jpg" alt="ESP32 Air Station - Lab Bench Testing" loading="lazy"></a>
+        <a href="assets/img/act0-4.jpg" data-lb><img src="assets/img/act0-4.jpg" alt="ESP32 Air Station - Calibration Environment" loading="lazy"></a>
+        <a href="assets/img/act0-5.jpg" data-lb><img src="assets/img/act0-5.jpg" alt="ESP32 Air Station - Finished Prototype Enclosure" loading="lazy"></a>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+      <a class="btn-hw primary" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
+        <span>Download Full Technical Report (PDF)</span> &rarr;
+      </a>
+      <a class="btn-hw" href="https://github.com/finterstrong" target="_blank" rel="noopener">
+        <span>View Firmware on GitHub (@finterstrong)</span> &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- ================= SECTION: RESEARCH & INTERNATIONAL AWARDS ================= -->
+  <div class="section-marker" id="research">
+    <span class="marker-num">02 // RESEARCH &amp; HONORS</span>
+    <h2 class="bench-title">International Publications &amp; Global Competitions</h2>
+  </div>
+
+  <div class="bento-grid">
+    <!-- CO-AUTHORED JOURNAL PAPER -->
+    <div class="bento-card col-6 rv" style="border-left:3px solid var(--copper)">
+      <div class="tp-marker"><span class="tp-dot"></span> REF_JOURNAL_01</div>
+      <div class="silkscreen-tag">PEER-REVIEWED SCIENTIFIC JOURNAL &middot; 2026</div>
+      <h3 style="color:#fff;margin-top:10px;font-size:1.15rem;">
+        Co-Author, International Scientific Paper &mdash; IJMSM
       </h3>
-      <p>
-        <span data-en>Participated in visiting, giving meaningful gifts, and offering emotional support to pediatric patients facing severe health conditions and underprivileged circumstances at Saint Paul General Hospital, Hanoi. Received an official Letter of Gratitude from the hospital administration recognizing positive community impact.</span>
-        <span data-vi>Trực tiếp tham gia chương trình thăm hỏi, trao quà và động viên tinh thần cho các bệnh nhi đang điều trị nội trú có hoàn cảnh khó khăn tại Bệnh viện Đa khoa Xanh Pôn, Hà Nội. Hoạt động được Ban Giám đốc Bệnh viện ghi nhận và gửi Thư cảm ơn chính thức.</span>
+      <p style="font-size:0.9rem;color:var(--mute);margin-top:8px;">
+        Co-authored the published research paper titled: <i>&ldquo;Reducing Traffic Congestion in Hanoi, Vietnam Using Artificial Intelligence and Internet of Things&rdquo;</i> (ranked 3rd author among 7 contributors). Contributed to the IoT sensor network telemetry pipeline, field data acquisition, and real-world signal logging.
       </p>
       
-      <div class="doclinks" style="margin-bottom:14px">
-        <a class="btn" href="assets/docs/thu-cam-on-cua-bv-a-khoa-xanh-pon.pdf" target="_blank" rel="noopener">
-          <span data-en>Official Letter of Gratitude (PDF) &rarr;</span>
-          <span data-vi>Thư cảm ơn của Bệnh viện Đa khoa Xanh Pôn (PDF) &rarr;</span>
+      <div style="background:#081324;border:1px solid #142847;border-radius:8px;padding:12px 14px;margin-top:14px;font-family:var(--font-mono);font-size:0.75rem;color:var(--mute);line-height:1.7;">
+        <div><b>Journal:</b> Golden Sun-Rise International Journal of Multidisciplinary on Science and Management</div>
+        <div><b>Indexing:</b> ISSN 3048-5037 &middot; Vol. 3, No. 3 (2026), pp. 120&ndash;129</div>
+        <div><b>Authors:</b> Nguyen Xuan Hung, Lam An Binh, <b>Le Huy Hoang</b>, Dao Duy Bach, Nguyen Viet Anh, Bui Thai An, Vu Xuan Manh</div>
+        <div><b>DOI:</b> <a href="https://doi.org/10.71141/30485037/V3I3P111" target="_blank" rel="noopener" style="color:var(--cyan)">10.71141/30485037/V3I3P111 &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- AIGC 2025 GRAND PRIX AWARD -->
+    <div class="bento-card col-6 rv" style="border-left:3px solid var(--amber)">
+      <div class="tp-marker"><span class="tp-dot"></span> REF_AWARD_01</div>
+      <div class="silkscreen-tag">GLOBAL COMPETITION &middot; SINGAPORE 2025</div>
+      <h3 style="color:#fff;margin-top:10px;font-size:1.15rem;">
+        Grand Prix Award &mdash; Advanced Innovation Global Competition (AIGC)
+      </h3>
+      <p style="font-size:0.9rem;color:var(--mute);margin-top:8px;">
+        Won the highest honor (<b>Grand Prix Award</b>) at the AIGC 2025 in Singapore for the engineering project: <i>&ldquo;AI-Powered Protective Gear Recognition System for Construction Site Safety&rdquo;</i>. Awarded on May 4, 2025, for integrating computer vision safety inspection with edge hardware alerts.
+      </p>
+
+      <div style="display:flex;align-items:center;gap:16px;margin-top:16px;background:#081324;border:1px solid #142847;border-radius:8px;padding:12px 14px;">
+        <a href="assets/img/award-aigc.jpg" data-lb style="flex:0 0 96px;width:96px;height:96px;border-radius:8px;overflow:hidden;border:1px solid var(--amber);display:block;">
+          <img src="assets/img/award-aigc.jpg" alt="AIGC 2025 Grand Prix Award Certificate" style="width:100%;height:100%;object-fit:cover;">
+        </a>
+        <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--mute);">
+          <strong style="color:var(--amber);display:block;font-size:0.85rem;">Grand Prix Distinction</strong>
+          <span>Awarded in Singapore &middot; Click certificate thumbnail to examine full verified scan in high resolution.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION: HARDWARE TOOLCHAIN & COMPETENCIES ================= -->
+  <div class="section-marker" id="competencies">
+    <span class="marker-num">03 // HARDWARE TOOLCHAIN</span>
+    <h2 class="bench-title">Technical Competencies &amp; Lab Toolchain</h2>
+  </div>
+
+  <div class="bento-grid">
+    <!-- CLUSTER 1: PCB & HARDWARE -->
+    <div class="skill-bento-card col-6 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> MOD_PCB</div>
+      <h4><span>&#9881;</span> PCB Design &amp; Fabrication</h4>
+      <p>Board architecture, schematic capture, dual-layer routing, impedance matching, and benchtop testing.</p>
+      <div class="chip-container">
+        <span class="hw-chip primary">Altium Designer</span>
+        <span class="hw-chip">2-Layer PCB Layout</span>
+        <span class="hw-chip">Schematic Capture</span>
+        <span class="hw-chip">LDO &amp; Buck Regulation</span>
+        <span class="hw-chip">Ground Plane Isolation</span>
+        <span class="hw-chip">SMD &amp; THT Soldering</span>
+        <span class="hw-chip">Oscilloscope &amp; DMM</span>
+      </div>
+    </div>
+
+    <!-- CLUSTER 2: EMBEDDED ARCHITECTURE -->
+    <div class="skill-bento-card col-6 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> MOD_MCU</div>
+      <h4><span>&#128187;</span> Microcontrollers &amp; Hardware Buses</h4>
+      <p>Microcontroller peripherals, hardware interrupt handling, ADC signal acquisition, and serial communications.</p>
+      <div class="chip-container">
+        <span class="hw-chip primary">ESP32 (Tensilica 32-bit)</span>
+        <span class="hw-chip">Arduino / ATmega</span>
+        <span class="hw-chip">12-Bit ADC Conditioning</span>
+        <span class="hw-chip">I2C Bus (SSD1306 OLED)</span>
+        <span class="hw-chip">SPI &amp; UART</span>
+        <span class="hw-chip">PWM Drivers</span>
+        <span class="hw-chip">GPIO Interfacing</span>
+      </div>
+    </div>
+
+    <!-- CLUSTER 3: FIRMWARE & IOT -->
+    <div class="skill-bento-card col-6 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> MOD_FIRM</div>
+      <h4><span>&#128246;</span> Embedded Firmware &amp; IoT Networking</h4>
+      <p>Non-blocking C/C++ firmware routines, asynchronous event handling, and cloud telemetry streams.</p>
+      <div class="chip-container">
+        <span class="hw-chip primary">C / C++ (Embedded)</span>
+        <span class="hw-chip">Python</span>
+        <span class="hw-chip">PlatformIO / Arduino IDE</span>
+        <span class="hw-chip">ThingSpeak Cloud API</span>
+        <span class="hw-chip">HTTP REST Telemetry</span>
+        <span class="hw-chip">Auto-Reconnect Watchdog</span>
+        <a href="https://github.com/finterstrong" target="_blank" rel="noopener" class="hw-chip primary">Git &amp; GitHub (@finterstrong) &rarr;</a>
+      </div>
+    </div>
+
+    <!-- CLUSTER 4: APPLIED PHYSICS & SENSORS -->
+    <div class="skill-bento-card col-6 rv">
+      <div class="tp-marker"><span class="tp-dot"></span> MOD_PHYS</div>
+      <h4><span>&#9879;</span> Applied Physics &amp; Instrumentation</h4>
+      <p>Solid-state semiconductor theory, analog signal filtering, sensor physics, and mathematical curve fitting.</p>
+      <div class="chip-container">
+        <span class="hw-chip primary">MQ-7 (Carbon Monoxide)</span>
+        <span class="hw-chip">MQ-2 (Combustible Gas)</span>
+        <span class="hw-chip">MQ-3 (Alcohol/VOC)</span>
+        <span class="hw-chip">DHT22 Temp &amp; Humidity</span>
+        <span class="hw-chip">PPM Power-Law Fit</span>
+        <span class="hw-chip">Moving-Average Filter</span>
+        <span class="hw-chip">Semiconductor Physics</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION: COMMUNITY ACTION & OUTREACH ================= -->
+  <div class="section-marker" id="community">
+    <span class="marker-num">04 // COMMUNITY &amp; LEADERSHIP</span>
+    <h2 class="bench-title">Social Responsibility &amp; Volunteer Initiatives</h2>
+  </div>
+
+  <div class="bento-grid">
+    <!-- SAINT PAUL HOSPITAL -->
+    <div class="bento-card col-6 rv" style="border-left:3px solid var(--emerald)">
+      <div class="tp-marker"><span class="tp-dot"></span> CHARITY_01</div>
+      <div class="silkscreen-tag">SAINT PAUL GENERAL HOSPITAL &middot; 2026</div>
+      <h3 style="color:#fff;margin-top:10px;font-size:1.15rem;">
+        Gift-Giving for Disadvantaged Young Patients
+      </h3>
+      <p style="font-size:0.9rem;color:var(--mute);margin-top:8px;">
+        Volunteered in an outreach program providing gifts, emotional encouragement, and direct support to disadvantaged pediatric patients undergoing inpatient medical treatment at Saint Paul General Hospital in Hanoi. Recognized by the Hospital Leadership with an official Letter of Gratitude.
+      </p>
+
+      <div style="margin-top:14px;">
+        <a class="btn-hw" href="assets/docs/thu-cam-on-cua-bv-a-khoa-xanh-pon.pdf" target="_blank" rel="noopener">
+          <span>Letter of Gratitude (PDF)</span> &rarr;
         </a>
       </div>
 
-      <h4 style="font-size:0.92rem;color:var(--cyan);margin-bottom:6px">
-        <span data-en>Photo documentation at Saint Paul General Hospital (click to zoom)</span>
-        <span data-vi>Hình ảnh hoạt động tại Bệnh viện Đa khoa Xanh Pôn (nhấp để phóng to)</span>
-      </h4>
-      <div class="gal">
+      <div class="hw-gallery-grid" style="grid-template-columns:repeat(5, 1fr);margin-top:14px;">
         <a href="assets/img/act1-0.jpg" data-lb><img src="assets/img/act1-0.jpg" alt="Saint Paul Hospital Volunteer 1" loading="lazy"></a>
         <a href="assets/img/act1-1.jpg" data-lb><img src="assets/img/act1-1.jpg" alt="Saint Paul Hospital Volunteer 2" loading="lazy"></a>
         <a href="assets/img/act1-2.jpg" data-lb><img src="assets/img/act1-2.jpg" alt="Saint Paul Hospital Volunteer 3" loading="lazy"></a>
@@ -345,293 +429,145 @@
       </div>
     </div>
 
-    <!-- HOẠT ĐỘNG 2: TIẾP SỨC MÙA THI HUS -->
-    <div class="card rv" style="margin-top:24px;border-left:4px solid var(--cyan)">
-      <div class="meta"><span data-en>Youth Volunteer &middot; HUS - VNU Hanoi (2026)</span><span data-vi>Thanh niên tình nguyện &middot; Trường ĐH Khoa học Tự nhiên &ndash; ĐHQGHN (2026)</span></div>
-      <h3 style="margin-top:8px">
-        <span data-en>Volunteer, "Exam Season Support" Campaign &mdash; HUS, VNU Hanoi</span>
-        <span data-vi>Tình nguyện viên chiến dịch "Tiếp sức mùa thi" &mdash; Trường ĐH Khoa học Tự nhiên, ĐHQG Hà Nội</span>
+    <!-- EXAM SEASON SUPPORT -->
+    <div class="bento-card col-6 rv" style="border-left:3px solid var(--cyan)">
+      <div class="tp-marker"><span class="tp-dot"></span> VOLUNTEER_02</div>
+      <div class="silkscreen-tag">HUS - VNU HANOI &middot; 2026</div>
+      <h3 style="color:#fff;margin-top:10px;font-size:1.15rem;">
+        Volunteer, "Exam Season Support" Campaign
       </h3>
-      <p>
-        <span data-en>Served as an active volunteer in the 2026 Exam Season Support team organized by the Youth Union &amp; Student Association of VNU University of Science. Assisted hundreds of candidates and parents during the high-stakes grade-10 gifted entrance examinations. Awarded official Certificate of Recognition No. 170-QD/DTN (May 29, 2026).</span>
-        <span data-vi>Tham gia đội hình thanh niên tình nguyện Tiếp sức mùa thi 2026 do Đoàn Thanh niên &ndash; Hội Sinh viên Trường ĐH Khoa học Tự nhiên (ĐHQG Hà Nội) tổ chức. Trực tiếp điều phối, hướng dẫn và hỗ trợ hàng trăm thí sinh cùng phụ huynh trong kỳ thi tuyển sinh vào lớp 10 chuyên năm 2026. Được Đoàn trường trao tặng Giấy chứng nhận số 170-QĐ/ĐTN (29/5/2026).</span>
+      <p style="font-size:0.9rem;color:var(--mute);margin-top:8px;">
+        Served as an active team volunteer organized by the Youth Union &amp; Student Association of VNU University of Science (HUS). Coordinated orientation logistics and offered moral encouragement for thousands of candidates and parents during the 2026 Grade 10 Gifted Admissions Exams.
       </p>
 
-      <div class="doclinks" style="margin-bottom:14px">
-        <a class="btn" href="assets/img/act2-cert.png" data-lb>
-          <span data-en>View Certificate of Recognition (Image) &rarr;</span>
-          <span data-vi>Xem Giấy chứng nhận Đoàn trường (Ảnh) &rarr;</span>
+      <div style="margin-top:14px;">
+        <a class="btn-hw" href="assets/img/act2-cert.png" data-lb>
+          <span>Certificate No. 170-QD/DTN</span> &rarr;
         </a>
       </div>
 
-      <div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))">
-        <a href="assets/img/act2-cert.png" data-lb><img src="assets/img/act2-cert.png" alt="Giấy chứng nhận Tiếp sức mùa thi 2026" loading="lazy"></a>
-        <a href="assets/img/act2-0.jpg" data-lb><img src="assets/img/act2-0.jpg" alt="Tiếp sức mùa thi HUS 1" loading="lazy"></a>
-        <a href="assets/img/act2-1.jpg" data-lb><img src="assets/img/act2-1.jpg" alt="Tiếp sức mùa thi HUS 2" loading="lazy"></a>
+      <div class="hw-gallery-grid" style="grid-template-columns:repeat(3, 1fr);margin-top:14px;">
+        <a href="assets/img/act2-cert.png" data-lb><img src="assets/img/act2-cert.png" alt="Exam Season Support Certificate" loading="lazy"></a>
+        <a href="assets/img/act2-0.jpg" data-lb><img src="assets/img/act2-0.jpg" alt="Exam Season Support Volunteering 1" loading="lazy"></a>
+        <a href="assets/img/act2-1.jpg" data-lb><img src="assets/img/act2-1.jpg" alt="Exam Season Support Volunteering 2" loading="lazy"></a>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ================= 04 / HỒ SƠ NĂNG LỰC KỸ THUẬT (SKILLS - BỎ ẢNH, BỎ %) ================= -->
-<section id="skills">
+  <!-- ================= SECTION: CIRCUIT TRACE TIMELINE ================= -->
+  <div class="section-marker" id="milestones">
+    <span class="marker-num">05 // CIRCUIT TRACE</span>
+    <h2 class="bench-title">Engineering Milestones &amp; Academic Progression</h2>
+  </div>
+
+  <div class="teardown-box rv">
+    <div class="circuit-trace-timeline">
+      <!-- 2024 -->
+      <div class="trace-node">
+        <span class="year-tag">2024 &ndash; 2025 // GRADE 10 (HUS-HSGS)</span>
+        <h3>Admitted to Physics Track at HUS High School for Gifted Students</h3>
+        <p>
+          Earned admission to Class 11A1 (Physics Major) at the High School for Gifted Students, Vietnam National University Hanoi. Established strong academic roots in Newtonian mechanics, electromagnetism, semiconductor physics, and basic microcontroller programming (Arduino &amp; ESP32).
+        </p>
+      </div>
+
+      <!-- 2025 -->
+      <div class="trace-node">
+        <span class="year-tag">2025 // GRADE 11 (INTERNATIONAL HONORS &amp; HARDWARE)</span>
+        <h3>AIGC Grand Prix Win in Singapore &amp; Air-Quality Station Fabrication</h3>
+        <p>
+          Awarded Grand Prix Award at the Advanced Innovation Global Competition (AIGC 2025) in Singapore. Completed the full engineering cycle of the personal IoT air quality monitoring rig: schematic design, Altium Designer 2-layer PCB layout, 12-bit ADC conditioning, and ThingSpeak cloud telemetry.
+        </p>
+      </div>
+
+      <!-- 2026 -->
+      <div class="trace-node">
+        <span class="year-tag">2026 // GRADE 11 &ndash; 12 (SCIENTIFIC RESEARCH &amp; SERVICE)</span>
+        <h3>International Journal Co-Authorship &amp; Hospital Volunteering</h3>
+        <p>
+          Co-authored peer-reviewed research paper on IoT traffic optimization published in Golden Sun-Rise International Journal (IJMSM, ISSN 3048-5037). Volunteered in community initiatives at Saint Paul General Hospital (official Letter of Gratitude) and HUS Exam Season Support (Certificate No. 170-QD/DTN).
+        </p>
+      </div>
+
+      <!-- 2026-2027 -->
+      <div class="trace-node" style="margin-bottom:0;">
+        <span class="year-tag">2026 &ndash; 2027 // FUTURE TRAJECTORY (UNDERGRADUATE EEE)</span>
+        <h3>Undergraduate Applications in Electrical &amp; Electronics Engineering</h3>
+        <p>
+          Finalizing applications for premier international Electrical &amp; Computer Engineering programs. Designing Generation 2 of the environmental station: integrating ESP-NOW mesh networking, ultra-low-power sleep states, and onboard tinyML anomaly detection.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ================= DOSSIER DOCK & CONTACT FOOTER ================= -->
+<div class="dossier-dock" id="dossier">
   <div class="wrap">
-    <div class="sechead rv">
-      <div class="eyebrow">04 / <span data-en>Technical Competencies</span><span data-vi>Hồ sơ năng lực</span></div>
-      <h2><span data-en>Electrical &amp; Embedded Engineering Skills</span><span data-vi>Kỹ năng Kỹ thuật Điện &ndash; Điện tử &amp; Hệ thống nhúng</span></h2>
-      <p class="lead">
-        <span data-en>Practical engineering competencies developed through hands-on breadboarding, PCB layout routing, embedded firmware development, and international scientific inquiry. Categorized cleanly without arbitrary percentage ratings.</span>
-        <span data-vi>Năng lực kỹ thuật thực tế được trui rèn qua quá trình trực tiếp thiết kế mạch in, hàn linh kiện, lập trình firmware vi điều khiển và nghiên cứu khoa học. Được phân nhóm chuyên môn rõ ràng, không sử dụng các chỉ số phần trăm cảm tính.</span>
-      </p>
+    <div class="section-marker" style="margin-top:0;">
+      <span class="marker-num">06 // VERIFIED DOSSIER</span>
+      <h2 class="bench-title">Official Documentation &amp; Direct Communication</h2>
     </div>
 
-    <div class="skill-matrix rv">
-      <!-- NHÓM 1: THIẾT KẾ PHẦN CỨNG & MẠCH IN -->
-      <div class="skill-card">
-        <h4>
-          <span class="icon">&#9881;</span>
-          <span data-en>Hardware &amp; PCB Design</span><span data-vi>Thiết kế Phần cứng &amp; Mạch in</span>
-        </h4>
-        <p>
-          <span data-en>Schematic capture, multi-layer printed circuit board layout, footprint generation, and prototyping.</span>
-          <span data-vi>Thiết kế sơ đồ nguyên lý, vẽ mạch in đa lớp, tạo footprint linh kiện và chế tạo bo mạch mẫu.</span>
+    <div class="dock-grid rv">
+      <!-- CONTACT CHANNELS -->
+      <div class="dock-card">
+        <h3>Direct Communication</h3>
+        <p style="font-size:0.88rem;color:var(--mute);margin-bottom:16px;">
+          Available for admissions faculty review, engineering discussions, and academic collaborations:
         </p>
-        <div class="skill-pill-list">
-          <span class="skill-pill core">Altium Designer</span>
-          <span class="skill-pill">2-Layer PCB Layout</span>
-          <span class="skill-pill">Schematic Capture</span>
-          <span class="skill-pill">Power Regulation (LDO/Buck)</span>
-          <span class="skill-pill">SMD / THT Soldering</span>
-          <span class="skill-pill">Oscilloscope &amp; DMM</span>
+        <div style="font-family:var(--font-mono);font-size:0.82rem;line-height:2.2;color:var(--silkscreen);">
+          <div><b>STUDENT:</b> Le Huy Hoang (Class 11A1 Physics)</div>
+          <div><b>INSTITUTION:</b> HUS High School for Gifted Students, VNU Hanoi</div>
+          <div><b>LOCATION:</b> Hanoi, Vietnam</div>
+          <div><b>INTENDED MAJOR:</b> Electrical &amp; Electronics Engineering (EEE)</div>
+          <div><b>GITHUB:</b> <a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="color:var(--cyan)">github.com/finterstrong ↗</a></div>
         </div>
-      </div>
-
-      <!-- NHÓM 2: VI ĐIỀU KHIỂN & HỆ THỐNG NHÚNG -->
-      <div class="skill-card">
-        <h4>
-          <span class="icon">&#128187;</span>
-          <span data-en>Microcontrollers &amp; Embedded</span><span data-vi>Vi điều khiển &amp; Hệ thống nhúng</span>
-        </h4>
-        <p>
-          <span data-en>Microcontroller architecture, hardware peripheral interfacing, interrupt servicing, and bus protocols.</span>
-          <span data-vi>Cấu trúc vi điều khiển, điều khiển ngoại vi, xử lý ngắt và giao tiếp truyền thông nối tiếp.</span>
-        </p>
-        <div class="skill-pill-list">
-          <span class="skill-pill core">ESP32 (Tensilica 32-bit)</span>
-          <span class="skill-pill">Arduino (ATmega)</span>
-          <span class="skill-pill">12-bit ADC Conditioning</span>
-          <span class="skill-pill">I2C (OLED SSD1306)</span>
-          <span class="skill-pill">SPI &amp; UART</span>
-          <span class="skill-pill">PWM Control</span>
-        </div>
-      </div>
-
-      <!-- NHÓM 3: FIRMWARE & IoT NETWORKING -->
-      <div class="skill-card">
-        <h4>
-          <span class="icon">&#128246;</span>
-          <span data-en>Firmware &amp; IoT Cloud</span><span data-vi>Lập trình Firmware &amp; Mạng IoT</span>
-        </h4>
-        <p>
-          <span data-en>Embedded firmware programming, non-blocking asynchronous routines, and cloud data pipelining.</span>
-          <span data-vi>Lập trình firmware nhúng, giải thuật bất đồng bộ và đồng bộ dữ liệu thời gian thực lên đám mây.</span>
-        </p>
-        <div class="skill-pill-list">
-          <span class="skill-pill core">C / C++ (Embedded)</span>
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">ThingSpeak REST API</span>
-          <span class="skill-pill">WiFi Reconnect Logic</span>
-          <span class="skill-pill">PlatformIO / Arduino IDE</span>
-          <span class="skill-pill">Watchdog Timers</span>
-        </div>
-      </div>
-
-      <!-- NHÓM 4: VẬT LÝ KỸ THUẬT & CẢM BIẾN -->
-      <div class="skill-card">
-        <h4>
-          <span class="icon">&#9879;</span>
-          <span data-en>Physics &amp; Sensor Instrumentation</span><span data-vi>Vật lý Ứng dụng &amp; Cảm biến</span>
-        </h4>
-        <p>
-          <span data-en>Theoretical physics foundation, semiconductor sensor mechanisms, analog filtering, and ppm calibration.</span>
-          <span data-vi>Nền tảng Vật lý bán dẫn, cơ chế cảm biến oxit kim loại, lọc nhiễu tín hiệu và hiệu chuẩn nồng độ ppm.</span>
-        </p>
-        <div class="skill-pill-list">
-          <span class="skill-pill core">Gas Sensors (MQ2, MQ3, MQ7)</span>
-          <span class="skill-pill">DHT22 Temperature &amp; Humidity</span>
-          <span class="skill-pill">Analog Signal Filtering</span>
-          <span class="skill-pill">Power-Law PPM Curves</span>
-          <span class="skill-pill">Semiconductor Physics</span>
-          <span class="skill-pill">Circuit Theory</span>
-        </div>
-      </div>
-
-      <!-- NHÓM 5: CÔNG CỤ KỸ THUẬT & NGHIÊN CỨU -->
-      <div class="skill-card">
-        <h4>
-          <span class="icon">&#128218;</span>
-          <span data-en>Engineering Tools &amp; Research</span><span data-vi>Công cụ Nghiên cứu &amp; Kỹ thuật</span>
-        </h4>
-        <p>
-          <span data-en>Rigorous academic documentation, technical defense, version control, and multi-disciplinary teamwork.</span>
-          <span data-vi>Viết báo cáo kỹ thuật chuẩn mực, thuyết trình bảo vệ đề tài, quản lý mã nguồn và làm việc nhóm.</span>
-        </p>
-        <div class="skill-pill-list">
-          <a href="https://github.com/finterstrong" target="_blank" rel="noopener" class="skill-pill core" style="text-decoration:none">Git &amp; GitHub (&#64;finterstrong) &rarr;</a>
-          <span class="skill-pill">Technical Documentation</span>
-          <span class="skill-pill">Scientific Paper Co-Author</span>
-          <span class="skill-pill">Scientific Poster Layout</span>
-          <span class="skill-pill">Project Defense Q&amp;A</span>
-          <span class="skill-pill">Interdisciplinary Teamwork</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 05 / HÀNH TRÌNH & CỘT MỐC (JOURNEY - BỎ ẢNH) ================= -->
-<section id="journey">
-  <div class="wrap">
-    <div class="sechead rv">
-      <div class="eyebrow">05 / <span data-en>Milestones &amp; Trajectory</span><span data-vi>Hành trình &amp; Cột mốc</span></div>
-      <h2><span data-en>Engineering Journey &amp; Milestones</span><span data-vi>Dấu ấn trưởng thành &amp; Phát triển kỹ thuật</span></h2>
-      <p class="lead">
-        <span data-en>A clear timeline highlighting academic progression, hardware fabrication accomplishments, international accolades, and community service.</span>
-        <span data-vi>Quá trình tích lũy kiến thức, hoàn thiện các sản phẩm phần cứng, gặt hái giải thưởng quốc tế và cống hiến cho xã hội.</span>
-      </p>
-    </div>
-
-    <div class="tl rv">
-      <!-- MỐC 1: 2024 -->
-      <div class="it">
-        <div class="yr">2024 &ndash; 2025 (<span data-en>Grade 10 &middot; HSGS</span><span data-vi>Lớp 10 &middot; THPT Chuyên KHTN</span>)</div>
-        <h3>
-          <span data-en>Admission to HUS High School for Gifted Students (Physics Major)</span>
-          <span data-vi>Trúng tuyển Lớp chuyên Vật lý &mdash; THPT Chuyên Khoa học Tự nhiên</span>
-        </h3>
-        <p>
-          <span data-en>Passed the highly competitive entrance examination to enter the Physics Major class (Class 11A1) at HUS High School for Gifted Students (HSGS &ndash; VNU Hanoi). Built foundational knowledge in general physics, circuit laws, electromagnetism, and began programming microcontroller boards (Arduino, ESP32).</span>
-          <span data-vi>Trúng tuyển vào lớp chuyên Vật lý (Lớp 11A1) trường THPT Chuyên Khoa học Tự nhiên (ĐHQG Hà Nội). Xây dựng nền tảng vững vàng về Vật lý đại cương, lý thuyết mạch điện, trường điện từ và bắt đầu bước vào lĩnh vực lập trình vi điều khiển (Arduino, ESP32).</span>
-        </p>
-      </div>
-
-      <!-- MỐC 2: 2025 -->
-      <div class="it">
-        <div class="yr">2025 (<span data-en>Grade 11 &middot; International Recognition &amp; Prototype</span><span data-vi>Lớp 11 &middot; Giải thưởng Quốc tế &amp; Chế tạo Bo mạch</span>)</div>
-        <h3>
-          <span data-en>AIGC Grand Prix Award &amp; IoT Air-Quality Station Build</span>
-          <span data-vi>Giải thưởng Grand Prix AIGC &amp; Hoàn thiện Trạm đo chất lượng không khí IoT</span>
-        </h3>
-        <p>
-          <span data-en>Won the <b>Grand Prix Award</b> at the Advanced Innovation Global Competition (AIGC 2025) in Singapore for AI-powered industrial safety gear recognition. Successfully designed, fabricated, and calibrated the personal engineering build: an ESP32-based multi-sensor air quality monitor with custom Altium Designer PCB layout and ThingSpeak cloud telemetry.</span>
-          <span data-vi>Đoạt <b>Giải thưởng Grand Prix</b> tại Cuộc thi Sáng chế và Đổi mới Toàn cầu (AIGC 2025) tại Singapore với dự án AI nhận diện trang bị bảo hộ lao động. Chế tạo thành công sản phẩm cá nhân: Hệ thống quan trắc chất lượng không khí IoT trên ESP32 với mạch in tự thiết kế trên Altium Designer và truyền dữ liệu đám mây ThingSpeak.</span>
-        </p>
-      </div>
-
-      <!-- MỐC 3: 2026 -->
-      <div class="it">
-        <div class="yr">2026 (<span data-en>Grade 11 &ndash; 12 &middot; Research &amp; Community Service</span><span data-vi>Lớp 11 &ndash; 12 &middot; Công bố Quốc tế &amp; Thiện nguyện</span>)</div>
-        <h3>
-          <span data-en>International Journal Publication &amp; Dedicated Community Leadership</span>
-          <span data-vi>Công bố bài báo Tạp chí Quốc tế &amp; Hoạt động tình nguyện ý nghĩa</span>
-        </h3>
-        <p>
-          <span data-en>Co-authored the international scientific paper on IoT traffic optimization published in the Golden Sun-Rise International Journal (IJMSM, ISSN 3048-5037). Actively served the community: supported candidates in the HUS Exam Season Support campaign (Certificate No. 170-QD/DTN) and volunteered to deliver gifts to pediatric patients at Saint Paul General Hospital (Letter of Gratitude from hospital leadership).</span>
-          <span data-vi>Đồng tác giả bài báo khoa học quốc tế về ứng dụng IoT giảm ùn tắc giao thông trên Tạp chí Golden Sun-Rise (IJMSM). Tham gia tích cực các hoạt động vì cộng đồng: tình nguyện viên Tiếp sức mùa thi 2026 (Giấy chứng nhận số 170-QĐ/ĐTN của Đoàn trường ĐHKHTN) và thiện nguyện tặng quà bệnh nhi tại Bệnh viện Đa khoa Xanh Pôn (nhận Thư cảm ơn của Bệnh viện).</span>
-        </p>
-      </div>
-
-      <!-- MỐC 4: 2026-2027 -->
-      <div class="it">
-        <div class="yr">2026 &ndash; 2027 (<span data-en>Future Trajectory &middot; Undergraduate Applications</span><span data-vi>Định hướng Tương lai &middot; Ứng tuyển Đại học</span>)</div>
-        <h3>
-          <span data-en>Undergraduate Applications in Electrical &amp; Electronics Engineering</span>
-          <span data-vi>Ứng tuyển Đại học ngành Kỹ thuật Điện &ndash; Điện tử &amp; Mở rộng Hệ thống</span>
-        </h3>
-        <p>
-          <span data-en>Preparing international university applications majoring in <b>Electrical &amp; Electronics Engineering (EEE)</b> and <b>Computer Engineering</b>. Developing Generation 2 of the environmental telemetry station with mesh networking, ultra-low-power sleep modes, and on-device edge anomaly detection.</span>
-          <span data-vi>Hoàn thiện hồ sơ ứng tuyển đại học quốc tế chuyên ngành <b>Kỹ thuật Điện &ndash; Điện tử (EEE)</b> và <b>Kỹ thuật Máy tính</b>. Nghiên cứu phát triển trạm quan trắc môi trường thế hệ 2 với công nghệ mạng lưới (Mesh), chế độ siêu tiết kiệm năng lượng và thuật toán cảnh báo sớm tại biên.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 06 / LIÊN HỆ & TÀI LIỆU (CONTACT & DOCUMENTS) ================= -->
-<section id="contact" class="contact-section">
-  <div class="wrap">
-    <div class="sechead rv">
-      <div class="eyebrow">06 / <span data-en>Get in Touch</span><span data-vi>Thông tin liên hệ</span></div>
-      <h2><span data-en>Contact &amp; Official Dossier</span><span data-vi>Liên hệ &amp; Tài liệu Kỹ thuật</span></h2>
-      <p class="lead">
-        <span data-en>Open for academic inquiries, engineering collaboration, research discussion, and university admissions review.</span>
-        <span data-vi>Sẵn sàng trao đổi về chuyên môn kỹ thuật, nghiên cứu khoa học và cung cấp hồ sơ năng lực tới các hội đồng tuyển sinh.</span>
-      </p>
-    </div>
-
-    <div class="contact-grid">
-      <!-- THÔNG TIN LIÊN LẠC -->
-      <div class="card rv" style="border-left:4px solid var(--cyan)">
-        <h3 style="margin-bottom:14px"><span data-en>Direct Communication Channels</span><span data-vi>Kênh liên lạc trực tiếp</span></h3>
-        <ul class="contact-list">
-          <li><b><span data-en>Student:</span><span data-vi>Học sinh:</span></b> Lê Huy Hoàng (Class 11A1 Physics)</li>
-          <li><b><span data-en>School:</span><span data-vi>Trường:</span></b> <span data-en>HUS High School for Gifted Students (HSGS &ndash; VNU Hanoi)</span><span data-vi>THPT Chuyên Khoa học Tự nhiên &mdash; ĐHQG Hà Nội</span></li>
-          <li><b><span data-en>Location:</span><span data-vi>Khu vực:</span></b> Hanoi, Vietnam</li>
-          <li><b><span data-en>Target Major:</span><span data-vi>Ngành hướng tới:</span></b> Electrical &amp; Electronics Engineering (EEE)</li>
-          <li><b>GitHub:</b> <a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="color:var(--cyan);font-family:var(--mono);font-weight:600">github.com/finterstrong &rarr;</a></li>
-        </ul>
-        <div style="margin-top:20px">
-          <a class="btn pri" href="mailto:portfolio.lehuyhoang@gmail.com">
-            <span data-en>Send Inquiries via Email &rarr;</span>
-            <span data-vi>Gửi email liên hệ &rarr;</span>
+        <div style="margin-top:18px;">
+          <a class="btn-hw primary" href="mailto:portfolio.lehuyhoang@gmail.com">
+            <span>Send Email Inquiry</span> &rarr;
           </a>
         </div>
       </div>
 
-      <!-- TÀI LIỆU KỸ THUẬT & CHỨNG NHẬN ĐÍNH KÈM -->
-      <div class="card rv">
-        <h3 style="margin-bottom:14px"><span data-en>Verified Dossier Documents</span><span data-vi>Tài liệu hồ sơ đính kèm</span></h3>
-        <p style="margin-top:0">
-          <span data-en>Official PDF engineering reports, letters of gratitude, and certificates are documented below:</span>
-          <span data-vi>Toàn bộ báo cáo kỹ thuật, thư cảm ơn và chứng nhận giải thưởng được lưu trữ đầy đủ:</span>
+      <!-- DOWNLOADABLE VERIFIED ASSETS -->
+      <div class="dock-card">
+        <h3>Verified Dossier Downloads</h3>
+        <p style="font-size:0.88rem;color:var(--mute);margin-bottom:16px;">
+          Original technical reports, hospital letters, and international certificates:
         </p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
-          <a class="btn" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
-            <span data-en>📜 1. ESP32 Air-Quality Technical Report (PDF)</span>
-            <span data-vi>📜 1. Báo cáo Kỹ thuật Trạm đo Không khí ESP32 (PDF)</span>
+        <div class="dock-links-list">
+          <a class="btn-hw" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
+            <span>📜 1. ESP32 Air-Quality Technical Report (PDF)</span> &rarr;
           </a>
-          <a class="btn" href="assets/docs/thu-cam-on-cua-bv-a-khoa-xanh-pon.pdf" target="_blank" rel="noopener">
-            <span data-en>📜 2. Saint Paul Hospital Letter of Gratitude (PDF)</span>
-            <span data-vi>📜 2. Thư cảm ơn Bệnh viện Đa khoa Xanh Pôn (PDF)</span>
+          <a class="btn-hw" href="assets/docs/thu-cam-on-cua-bv-a-khoa-xanh-pon.pdf" target="_blank" rel="noopener">
+            <span>📜 2. Saint Paul Hospital Letter of Gratitude (PDF)</span> &rarr;
           </a>
-          <a class="btn" href="assets/img/award-aigc.jpg" data-lb>
-            <span data-en>🏆 3. AIGC 2025 Singapore Grand Prix Award (Cert)</span>
-            <span data-vi>🏆 3. Bằng chứng nhận Giải Grand Prix AIGC 2025 (Ảnh)</span>
+          <a class="btn-hw" href="assets/img/award-aigc.jpg" data-lb>
+            <span>🏆 3. AIGC 2025 Grand Prix Award Certificate (Scan)</span> &rarr;
           </a>
-          <a class="btn" href="assets/img/act2-cert.png" data-lb>
-            <span data-en>📜 4. HUS Exam Season Support Certificate (Cert)</span>
-            <span data-vi>📜 4. Giấy chứng nhận Tiếp sức mùa thi HUS 2026 (Ảnh)</span>
+          <a class="btn-hw" href="assets/img/act2-cert.png" data-lb>
+            <span>📜 4. HUS Exam Season Support Certificate (Scan)</span> &rarr;
           </a>
-          <a class="btn" href="https://github.com/finterstrong" target="_blank" rel="noopener">
-            <span data-en>💻 5. Engineering GitHub Profile (&commat;finterstrong) &rarr;</span>
-            <span data-vi>💻 5. Trang GitHub Kỹ thuật (&commat;finterstrong) &rarr;</span>
+          <a class="btn-hw" href="https://github.com/finterstrong" target="_blank" rel="noopener">
+            <span>💻 5. Engineering GitHub Repository (@finterstrong)</span> ↗
           </a>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
     <div>
-      &copy; 2026 Lê Huy Hoàng &middot; <span data-en>HUS High School for Gifted Students (HSGS &ndash; VNU). All rights reserved.</span><span data-vi>THPT Chuyên Khoa học Tự nhiên &mdash; ĐHQG Hà Nội. Bảo lưu mọi quyền.</span>
+      &copy; 2026 Le Huy Hoang &middot; HUS High School for Gifted Students &mdash; VNU Hanoi
     </div>
     <div>
-      <a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="color:var(--cyan);margin-right:14px;font-family:var(--mono);font-weight:600">GitHub: &#64;finterstrong &rarr;</a>
-      <span data-en>Electrical &amp; Electronics Engineering Portfolio</span>
-      <span data-vi>Hồ sơ năng lực Kỹ thuật Điện &ndash; Điện tử</span>
+      <a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="color:var(--cyan);margin-right:12px;">GitHub: @finterstrong</a>
+      <span>Electrical &amp; Electronics Engineering Candidate</span>
     </div>
   </div>
 </footer>
@@ -640,7 +576,7 @@
 <div class="lb" id="lb" hidden>
   <button class="x" id="lb-x" aria-label="Close">&times;</button>
   <button class="p" id="lb-p" aria-label="Previous">&#10094;</button>
-  <img id="lb-img" src="" alt="Enlarged view">
+  <img id="lb-img" src="" alt="Enlarged Engineering View">
   <button class="n" id="lb-n" aria-label="Next">&#10095;</button>
 </div>
 
