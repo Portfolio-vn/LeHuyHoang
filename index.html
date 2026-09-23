@@ -28,12 +28,13 @@
     <nav class="bench-nav" id="bench-nav">
       <a href="#workbench">Workbench</a>
       <a href="#hardware">ESP32 Rig</a>
+      <a href="#firmware">Firmware</a>
       <a href="#research">Research &amp; Awards</a>
       <a href="#competencies">Toolchain</a>
       <a href="#community">Community</a>
       <a href="#milestones">Timeline</a>
       <a href="#dossier">Dossier</a>
-      <a class="nav-gh-pill" href="https://github.com/finterstrong" target="_blank" rel="noopener">
+      <a class="nav-gh-pill" href="https://github.com/LHHHSGS2022" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         <span>GitHub</span> ↗
       </a>
@@ -75,9 +76,9 @@
         <a class="btn-hw" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
           <span>Technical Report (PDF)</span> &rarr;
         </a>
-        <a class="btn-hw" href="https://github.com/finterstrong" target="_blank" rel="noopener">
+        <a class="btn-hw" href="https://github.com/LHHHSGS2022" target="_blank" rel="noopener">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span>@finterstrong</span> ↗
+          <span>@LHHHSGS2022</span> ↗
         </a>
       </div>
     </div>
@@ -264,15 +265,267 @@
       <a class="btn-hw primary" href="assets/docs/bao-cao-ky-thuat-pdf.pdf" target="_blank" rel="noopener">
         <span>Download Full Technical Report (PDF)</span> &rarr;
       </a>
-      <a class="btn-hw" href="https://github.com/finterstrong" target="_blank" rel="noopener">
-        <span>View Firmware on GitHub (@finterstrong)</span> &rarr;
+      <a class="btn-hw" href="#firmware">
+        <span>Read the Firmware Source</span> &darr;
+      </a>
+      <a class="btn-hw" href="https://github.com/LHHHSGS2022/esp32-iot-firmware" target="_blank" rel="noopener">
+        <span>Firmware Repo on GitHub</span> &#8599;
       </a>
     </div>
   </div>
 
+  <!-- ================= SECTION: FIRMWARE SOURCE (esp32-iot-firmware) ================= -->
+  <div class="section-marker" id="firmware">
+    <span class="marker-num">02 // FIRMWARE SOURCE</span>
+    <h2 class="bench-title">ESP32 Sensor-Rig Firmware &amp; Code Repositories</h2>
+  </div>
+
+  <div class="bento-card col-12 rv fw-card">
+    <div class="tp-marker"><span class="tp-dot"></span> FW_FLASH_01</div>
+    <div class="fw-head">
+      <div>
+        <div class="silkscreen-tag">REPO &middot; LHHHSGS2022/esp32-iot-firmware &middot; main.ino</div>
+        <h3 style="font-size:1.3rem;color:#fff;margin-top:6px;">Embedded C++ Firmware for the ESP32 Sensor Rig</h3>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="teardown-badge">C++ / Arduino-ESP32</span>
+        <span class="teardown-badge">3&times; MQ + DHT22</span>
+        <span class="teardown-badge">SSD1306 OLED &middot; I2C</span>
+      </div>
+    </div>
+
+    <p style="font-size:0.95rem;color:var(--mute);max-width:85ch;">
+      The complete firmware flashed onto the ESP32 rig. Every 2&nbsp;seconds it samples three MQ gas sensors on the 12-bit ADC, converts each reading from the Rs/R0 resistance ratio to ppm with a power-law curve (<code class="fw-inline">ppm = a &middot; (Rs/R0)<sup>b</sup></code>), reads temperature and humidity from a DHT22, then prints everything to a 128&times;64 OLED and the serial console.
+    </p>
+
+    <div class="fw-grid">
+      <div class="fw-pinmap">
+        <div class="silkscreen-tag" style="margin-bottom:8px;">PIN MAP (FROM SOURCE)</div>
+        <table>
+          <tr><th>GPIO</th><th>Peripheral</th><th>Role</th></tr>
+          <tr><td>32</td><td>MQ-5</td><td>LPG &middot; ADC</td></tr>
+          <tr><td>33</td><td>MQ-3</td><td>Alcohol &middot; ADC</td></tr>
+          <tr><td>35</td><td>MQ-2</td><td>Smoke &middot; ADC</td></tr>
+          <tr><td>25</td><td>DHT22</td><td>Temp / Humidity</td></tr>
+          <tr><td>27 / 26</td><td>SSD1306</td><td>I2C SDA / SCL</td></tr>
+        </table>
+        <div class="silkscreen-tag" style="margin:16px 0 8px;">KEY ROUTINES</div>
+        <ul class="fw-list">
+          <li><b>MQ_GetPPM()</b> &mdash; ADC &rarr; Rs (10&nbsp;k&Omega; load) &rarr; Rs/R0 &rarr; ppm</li>
+          <li><b>setup()</b> &mdash; boots serial, I2C, OLED (0x3C) and DHT22 with status logs</li>
+          <li><b>loop()</b> &mdash; sample, convert, validate (NaN check), render, repeat</li>
+        </ul>
+      </div>
+
+      <div class="fw-code">
+        <div class="fw-code-bar">
+          <span class="fw-dots"><i></i><i></i><i></i></span>
+          <span class="fw-file">main.ino &middot; 162 lines</span>
+          <span class="fw-actions">
+            <button type="button" class="fw-btn" id="fw-copy">Copy</button>
+            <a class="fw-btn" href="assets/firmware/main.ino" download>Download</a>
+            <a class="fw-btn" href="https://github.com/LHHHSGS2022/esp32-iot-firmware/blob/main/main.ino" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </span>
+        </div>
+        <pre class="fw-pre" id="fw-pre"><code id="fw-src"><span class="tk-p">#include</span> &lt;Wire.h&gt;
+<span class="tk-p">#include</span> &lt;Adafruit_GFX.h&gt;
+<span class="tk-p">#include</span> &lt;Adafruit_SSD1306.h&gt;
+<span class="tk-p">#include</span> &lt;DHT.h&gt;
+<span class="tk-p">#include</span> &lt;WiFi.h&gt;
+<span class="tk-p">#include</span> &lt;HTTPClient.h&gt;
+<span class="tk-p">#include</span> <span class="tk-s">"ThingSpeak.h"</span>
+
+<span class="tk-c">// ================= OLED ==================</span>
+<span class="tk-p">#define</span> SCREEN_WIDTH <span class="tk-n">128</span>
+<span class="tk-p">#define</span> SCREEN_HEIGHT <span class="tk-n">64</span>
+<span class="tk-p">#define</span> OLED_RESET    -<span class="tk-n">1</span>
+Adafruit_SSD1306 <span class="tk-f">display</span>(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);
+
+<span class="tk-c">// ================= MQ SENSOR PINS ==================</span>
+<span class="tk-p">#define</span> MQ5_PIN <span class="tk-n">32</span>     <span class="tk-c">// MQ-5 (LPG)</span>
+<span class="tk-p">#define</span> MQ3_PIN <span class="tk-n">33</span>     <span class="tk-c">// MQ-3 (Alcohol)</span>
+<span class="tk-p">#define</span> MQ2_PIN <span class="tk-n">35</span>     <span class="tk-c">// MQ-2 (Smoke)</span>
+
+<span class="tk-c">// ================= DHT22 ==================</span>
+<span class="tk-p">#define</span> DHTPIN <span class="tk-n">25</span>
+<span class="tk-p">#define</span> DHTTYPE DHT22
+DHT <span class="tk-f">dht</span>(DHTPIN, DHTTYPE);
+
+<span class="tk-c">// ================= MQ Calibration ==================</span>
+<span class="tk-k">float</span> R0_MQ2 = <span class="tk-n">10.0</span>;   <span class="tk-c">// Change after calibration</span>
+<span class="tk-k">float</span> R0_MQ3 = <span class="tk-n">10.0</span>;
+<span class="tk-k">float</span> R0_MQ5 = <span class="tk-n">10.0</span>;
+
+<span class="tk-k">float</span> RL_VALUE = <span class="tk-n">10.0</span>;  <span class="tk-c">// Load resistor kΩ for MQ module</span>
+
+<span class="tk-c">// MQ PPM FUNCTION</span>
+<span class="tk-k">float</span> <span class="tk-f">MQ_GetPPM</span>(<span class="tk-k">int</span> adc, <span class="tk-k">float</span> R0, <span class="tk-k">float</span> a, <span class="tk-k">float</span> b) {
+  <span class="tk-k">if</span> (adc == <span class="tk-n">0</span>) adc = <span class="tk-n">1</span>;
+  <span class="tk-k">float</span> RS = RL_VALUE * ( (<span class="tk-n">4095.0</span> / adc) - <span class="tk-n">1.0</span> );
+  <span class="tk-k">float</span> ratio = RS / R0;
+  <span class="tk-k">float</span> ppm = a * <span class="tk-f">pow</span>(ratio, b);
+  <span class="tk-k">return</span> ppm;
+}
+
+<span class="tk-c">// ================= WiFi + ThingSpeak ==================</span>
+<span class="tk-p">#define</span> SECRET_SSID <span class="tk-s">"YOUR_WIFI_SSID"</span>          <span class="tk-c">// redacted for public portfolio</span>
+<span class="tk-p">#define</span> SECRET_PASS <span class="tk-s">"YOUR_WIFI_PASSWORD"</span>      <span class="tk-c">// redacted for public portfolio</span>
+
+WiFiClient client;
+<span class="tk-k">unsigned</span> <span class="tk-k">long</span> myChannelNumber = <span class="tk-n">2773429</span>;
+<span class="tk-k">const</span> <span class="tk-k">char</span> *myWriteAPIKey = <span class="tk-s">"YOUR_THINGSPEAK_WRITE_KEY"</span>;  <span class="tk-c">// redacted for public portfolio</span>
+
+
+<span class="tk-c">// ================= SETUP ==================</span>
+<span class="tk-k">void</span> <span class="tk-f">setup</span>() {
+  Serial.<span class="tk-f">begin</span>(<span class="tk-n">115200</span>);
+  <span class="tk-f">delay</span>(<span class="tk-n">1000</span>);
+
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"\n===== ESP32 SENSOR SYSTEM BOOTING ====="</span>);
+
+  <span class="tk-c">// Init I2C (SDA=21, SCL=22)</span>
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"[I2C] Initializing I2C on SDA=21, SCL=22..."</span>);
+  Wire.<span class="tk-f">begin</span>(<span class="tk-n">27</span>, <span class="tk-n">26</span>);
+
+  <span class="tk-c">// Init OLED</span>
+  Serial.<span class="tk-f">print</span>(<span class="tk-s">"[OLED] Initializing OLED... "</span>);
+  <span class="tk-k">if</span> (!display.<span class="tk-f">begin</span>(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.<span class="tk-f">println</span>(<span class="tk-s">"FAILED ❌"</span>);
+    <span class="tk-k">while</span> (<span class="tk-k">true</span>);
+  }
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"OK ✔"</span>);
+
+  display.<span class="tk-f">clearDisplay</span>();
+  display.<span class="tk-f">setTextColor</span>(SSD1306_WHITE);
+  display.<span class="tk-f">setTextSize</span>(<span class="tk-n">1</span>);
+
+  <span class="tk-c">// Init DHT22</span>
+  Serial.<span class="tk-f">print</span>(<span class="tk-s">"[DHT22] Initializing sensor... "</span>);
+  dht.<span class="tk-f">begin</span>();
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"OK ✔"</span>);
+
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"===== SYSTEM READY =====\n"</span>);
+}
+
+
+<span class="tk-c">// ================= LOOP ==================</span>
+<span class="tk-k">void</span> <span class="tk-f">loop</span>() {
+
+  <span class="tk-c">// -------- READ MQ ANALOG --------</span>
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"------ Reading MQ Sensors ------"</span>);
+
+  <span class="tk-k">int</span> mq5_adc = <span class="tk-f">analogRead</span>(MQ5_PIN);
+  <span class="tk-k">int</span> mq3_adc = <span class="tk-f">analogRead</span>(MQ3_PIN);
+  <span class="tk-k">int</span> mq2_adc = <span class="tk-f">analogRead</span>(MQ2_PIN);
+
+  Serial.<span class="tk-f">printf</span>(<span class="tk-s">"[MQ5] ADC=%d\n"</span>, mq5_adc);
+  Serial.<span class="tk-f">printf</span>(<span class="tk-s">"[MQ3] ADC=%d\n"</span>, mq3_adc);
+  Serial.<span class="tk-f">printf</span>(<span class="tk-s">"[MQ2] ADC=%d\n"</span>, mq2_adc);
+
+  <span class="tk-c">// -------- CONVERT TO PPM --------</span>
+
+  <span class="tk-c">// MQ2 – Smoke</span>
+  <span class="tk-k">float</span> mq2_ppm = <span class="tk-f">MQ_GetPPM</span>(mq2_adc, R0_MQ2, <span class="tk-n">114.75</span>, -<span class="tk-n">1.553</span>);
+
+  <span class="tk-c">// MQ3 – Alcohol</span>
+  <span class="tk-k">float</span> mq3_ppm = <span class="tk-f">MQ_GetPPM</span>(mq3_adc, R0_MQ3, <span class="tk-n">4.8387</span>, -<span class="tk-n">3.318</span>);
+
+  <span class="tk-c">// MQ5 – LPG</span>
+  <span class="tk-k">float</span> mq5_ppm = <span class="tk-f">MQ_GetPPM</span>(mq5_adc, R0_MQ5, <span class="tk-n">1000.5</span>, -<span class="tk-n">2.186</span>);
+
+
+  Serial.<span class="tk-f">printf</span>(<span class="tk-s">"[MQ2] Smoke = %.2f ppm\n"</span>, mq2_ppm);
+  Serial.<span class="tk-f">printf</span>(<span class="tk-s">"[MQ3] Alcohol = %.2f ppm\n"</span>, mq3_ppm);
+  Serial.<span class="tk-f">printf</span>(<span class="tk-s">"[MQ5] LPG = %.2f ppm\n"</span>, mq5_ppm);
+
+  <span class="tk-c">// -------- READ DHT22 --------</span>
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"------ Reading DHT22 ------"</span>);
+  <span class="tk-k">float</span> humi = dht.<span class="tk-f">readHumidity</span>();
+  <span class="tk-k">float</span> temp = dht.<span class="tk-f">readTemperature</span>();
+
+  <span class="tk-k">if</span> (<span class="tk-f">isnan</span>(humi) || <span class="tk-f">isnan</span>(temp)) {
+    Serial.<span class="tk-f">println</span>(<span class="tk-s">"[DHT22] ERROR ❌ Could not read data!"</span>);
+  } <span class="tk-k">else</span> {
+    Serial.<span class="tk-f">printf</span>(<span class="tk-s">"[DHT22] Temp: %.2f C | Humi: %.2f %%\n"</span>, temp, humi);
+  }
+
+
+  <span class="tk-c">// -------- UPDATE OLED --------</span>
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"------ Updating OLED Display ------"</span>);
+
+  display.<span class="tk-f">clearDisplay</span>();
+  display.<span class="tk-f">setCursor</span>(<span class="tk-n">0</span>, <span class="tk-n">0</span>);
+
+  display.<span class="tk-f">println</span>(<span class="tk-s">" ESP32 SENSOR DATA"</span>);
+  display.<span class="tk-f">println</span>(<span class="tk-s">"----------------------"</span>);
+
+  display.<span class="tk-f">print</span>(<span class="tk-s">"MQ2: "</span>);
+  display.<span class="tk-f">print</span>(mq2_ppm);
+  display.<span class="tk-f">println</span>(<span class="tk-s">" ppm"</span>);
+
+  display.<span class="tk-f">print</span>(<span class="tk-s">"MQ3: "</span>);
+  display.<span class="tk-f">print</span>(mq3_ppm);
+  display.<span class="tk-f">println</span>(<span class="tk-s">" ppm"</span>);
+
+  display.<span class="tk-f">print</span>(<span class="tk-s">"MQ5: "</span>);
+  display.<span class="tk-f">print</span>(mq5_ppm);
+  display.<span class="tk-f">println</span>(<span class="tk-s">" ppm"</span>);
+
+  <span class="tk-k">if</span> (<span class="tk-f">isnan</span>(temp) || <span class="tk-f">isnan</span>(humi)) {
+    display.<span class="tk-f">println</span>(<span class="tk-s">"DHT22 ERROR!"</span>);
+  } <span class="tk-k">else</span> {
+    display.<span class="tk-f">print</span>(<span class="tk-s">"T: "</span>);
+    display.<span class="tk-f">print</span>(temp);
+    display.<span class="tk-f">println</span>(<span class="tk-s">" C"</span>);
+
+    display.<span class="tk-f">print</span>(<span class="tk-s">"H: "</span>);
+    display.<span class="tk-f">print</span>(humi);
+    display.<span class="tk-f">println</span>(<span class="tk-s">" %"</span>);
+  }
+
+  display.<span class="tk-f">display</span>();
+
+  Serial.<span class="tk-f">println</span>(<span class="tk-s">"[OLED] Updated successfully ✔\n"</span>);
+
+  <span class="tk-f">delay</span>(<span class="tk-n">2000</span>);
+}</code></pre>
+        <button type="button" class="fw-expand" id="fw-expand" aria-expanded="false">Show full source &darr;</button>
+      </div>
+    </div>
+    <p class="fw-note">Wi-Fi credentials and the ThingSpeak API key are redacted in the copy shown here.</p>
+  </div>
+
+  <!-- REPOSITORY INDEX -->
+  <div class="bento-grid" style="margin-top:22px;">
+    <a class="bento-card col-3 rv repo-card" href="https://github.com/LHHHSGS2022/esp32-iot-firmware" target="_blank" rel="noopener">
+      <div class="silkscreen-tag">C++ &middot; FIRMWARE</div>
+      <h4>esp32-iot-firmware</h4>
+      <p>Embedded C++ firmware for the ESP32 multi-sensor rig shown above.</p>
+      <span class="repo-go">Open repo &#8599;</span>
+    </a>
+    <a class="bento-card col-3 rv repo-card" href="https://github.com/LHHHSGS2022/embedded-hardware-pcb" target="_blank" rel="noopener">
+      <div class="silkscreen-tag">ALTIUM &middot; HARDWARE</div>
+      <h4>embedded-hardware-pcb</h4>
+      <p>Altium Designer schematic (.SchDoc) and PCB layout (.PcbDoc) project files.</p>
+      <span class="repo-go">Open repo &#8599;</span>
+    </a>
+    <a class="bento-card col-3 rv repo-card" href="https://github.com/LHHHSGS2022/Hanoi-ai-iot-in-traffic" target="_blank" rel="noopener">
+      <div class="silkscreen-tag">AI + IOT &middot; RESEARCH</div>
+      <h4>Hanoi-ai-iot-in-traffic</h4>
+      <p>Code and calibration notes behind the IJMSM 2026 traffic-congestion paper.</p>
+      <span class="repo-go">Open repo &#8599;</span>
+    </a>
+    <a class="bento-card col-3 rv repo-card" href="https://github.com/LHHHSGS2022/LeHuyHoang-personal-projects" target="_blank" rel="noopener">
+      <div class="silkscreen-tag">HSGS &middot; COURSEWORK</div>
+      <h4>LeHuyHoang-personal-projects</h4>
+      <p>Reports, presentations, class activities and learning tracker from HSGS.</p>
+      <span class="repo-go">Open repo &#8599;</span>
+    </a>
+  </div>
+
   <!-- ================= SECTION: RESEARCH & INTERNATIONAL AWARDS ================= -->
   <div class="section-marker" id="research">
-    <span class="marker-num">02 // RESEARCH &amp; HONORS</span>
+    <span class="marker-num">03 // RESEARCH &amp; HONORS</span>
     <h2 class="bench-title">International Publications &amp; Global Competitions</h2>
   </div>
 
@@ -321,7 +574,7 @@
 
   <!-- ================= SECTION: HARDWARE TOOLCHAIN & COMPETENCIES ================= -->
   <div class="section-marker" id="competencies">
-    <span class="marker-num">03 // HARDWARE TOOLCHAIN</span>
+    <span class="marker-num">04 // HARDWARE TOOLCHAIN</span>
     <h2 class="bench-title">Technical Competencies &amp; Lab Toolchain</h2>
   </div>
 
@@ -370,7 +623,7 @@
         <span class="hw-chip">ThingSpeak Cloud API</span>
         <span class="hw-chip">HTTP REST Telemetry</span>
         <span class="hw-chip">Auto-Reconnect Watchdog</span>
-        <a href="https://github.com/finterstrong" target="_blank" rel="noopener" class="hw-chip primary">Git &amp; GitHub (@finterstrong) &rarr;</a>
+        <a href="https://github.com/LHHHSGS2022" target="_blank" rel="noopener" class="hw-chip primary">Git &amp; GitHub (@LHHHSGS2022) &rarr;</a>
       </div>
     </div>
 
@@ -393,7 +646,7 @@
 
   <!-- ================= SECTION: COMMUNITY ACTION & OUTREACH ================= -->
   <div class="section-marker" id="community">
-    <span class="marker-num">04 // COMMUNITY &amp; LEADERSHIP</span>
+    <span class="marker-num">05 // COMMUNITY &amp; LEADERSHIP</span>
     <h2 class="bench-title">Social Responsibility &amp; Volunteer Initiatives</h2>
   </div>
 
@@ -456,7 +709,7 @@
 
   <!-- ================= SECTION: CIRCUIT TRACE TIMELINE ================= -->
   <div class="section-marker" id="milestones">
-    <span class="marker-num">05 // CIRCUIT TRACE</span>
+    <span class="marker-num">06 // CIRCUIT TRACE</span>
     <h2 class="bench-title">Engineering Milestones &amp; Academic Progression</h2>
   </div>
 
@@ -506,7 +759,7 @@
 <div class="dossier-dock" id="dossier">
   <div class="wrap">
     <div class="section-marker" style="margin-top:0;">
-      <span class="marker-num">06 // VERIFIED DOSSIER</span>
+      <span class="marker-num">07 // VERIFIED DOSSIER</span>
       <h2 class="bench-title">Official Documentation &amp; Direct Communication</h2>
     </div>
 
@@ -522,7 +775,7 @@
           <div><b>INSTITUTION:</b> HUS High School for Gifted Students, VNU Hanoi</div>
           <div><b>LOCATION:</b> Hanoi, Vietnam</div>
           <div><b>INTENDED MAJOR:</b> Electrical &amp; Electronics Engineering (EEE)</div>
-          <div><b>GITHUB:</b> <a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="color:var(--cyan)">github.com/finterstrong ↗</a></div>
+          <div><b>GITHUB:</b> <a href="https://github.com/LHHHSGS2022" target="_blank" rel="noopener" style="color:var(--cyan)">github.com/LHHHSGS2022 ↗</a></div>
         </div>
         <div style="margin-top:18px;">
           <a class="btn-hw primary" href="mailto:portfolio.lehuyhoang@gmail.com">
@@ -550,8 +803,14 @@
           <a class="btn-hw" href="assets/img/act2-cert.png" data-lb>
             <span>📜 4. HUS Exam Season Support Certificate (Scan)</span> &rarr;
           </a>
-          <a class="btn-hw" href="https://github.com/finterstrong" target="_blank" rel="noopener">
-            <span>💻 5. Engineering GitHub Repository (@finterstrong)</span> ↗
+          <a class="btn-hw" href="https://github.com/LHHHSGS2022/esp32-iot-firmware" target="_blank" rel="noopener">
+            <span>💻 5. ESP32 Firmware Source Code (GitHub)</span> ↗
+          </a>
+          <a class="btn-hw" href="assets/firmware/main.ino" download>
+            <span>💾 6. Download Firmware File (main.ino)</span> &darr;
+          </a>
+          <a class="btn-hw" href="https://github.com/LHHHSGS2022?tab=repositories" target="_blank" rel="noopener">
+            <span>🗂 7. All GitHub Repositories (@LHHHSGS2022)</span> ↗
           </a>
         </div>
       </div>
@@ -566,7 +825,7 @@
       &copy; 2026 Le Huy Hoang &middot; HUS High School for Gifted Students &mdash; VNU Hanoi
     </div>
     <div>
-      <a href="https://github.com/finterstrong" target="_blank" rel="noopener" style="color:var(--cyan);margin-right:12px;">GitHub: @finterstrong</a>
+      <a href="https://github.com/LHHHSGS2022" target="_blank" rel="noopener" style="color:var(--cyan);margin-right:12px;">GitHub: @LHHHSGS2022</a>
       <span>Electrical &amp; Electronics Engineering Candidate</span>
     </div>
   </div>

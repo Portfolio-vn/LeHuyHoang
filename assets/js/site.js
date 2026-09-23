@@ -170,3 +170,36 @@
     }
   }, 3000);
 })();
+
+/* ---------- Firmware Source Viewer (copy + expand) ---------- */
+(function () {
+  var pre = document.getElementById('fw-pre');
+  var exp = document.getElementById('fw-expand');
+  var copy = document.getElementById('fw-copy');
+  var src = document.getElementById('fw-src');
+  if (exp && pre) {
+    exp.addEventListener('click', function () {
+      var open = pre.classList.toggle('open');
+      exp.setAttribute('aria-expanded', String(open));
+      exp.innerHTML = open ? 'Collapse source &uarr;' : 'Show full source &darr;';
+      if (!open) pre.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    });
+  }
+  if (copy && src) {
+    copy.addEventListener('click', function () {
+      var text = src.textContent;
+      function done(ok) {
+        copy.textContent = ok ? 'Copied ✔' : 'Copy failed';
+        setTimeout(function () { copy.textContent = 'Copy'; }, 1600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { done(document.execCommand('copy')); } catch (e) { done(false); }
+        document.body.removeChild(ta);
+      }
+    });
+  }
+})();
